@@ -15,7 +15,7 @@
 | **Total citations** | **733** |
 | **h-index** | **12** |
 | **i10-index** | **12** |
-| **Peer-reviewed publications** | **19** (9 first-author / 10 co-author) |
+| **Peer-reviewed publications** | **23** (9 first-author / 14 co-author) |
 | **Patents** | **5** (1 PCT, 4 Korea) |
 | **Conference talks** | **11** (7 international / 4 domestic) |
 | **Industry / national projects** | **8** |
@@ -144,17 +144,17 @@ This pillar is the next phase of the work — translating the optimization toolk
 ```mermaid
 xychart-beta
     title "Peer-Reviewed Publications per Year"
-    x-axis [2019, 2020, 2021, 2022, 2023, 2024, 2025]
-    y-axis "Publications" 0 --> 5
-    bar [2, 2, 2, 4, 2, 3, 4]
+    x-axis [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+    y-axis "Publications" 0 --> 6
+    bar [2, 2, 2, 3, 4, 5, 4, 1]
 ```
 
 ```mermaid
 pie title Publications by Research Pillar
-    "Nanophotonics" : 11
-    "Materials" : 4
+    "Nanophotonics" : 12
+    "Materials" : 6
     "Manufacturing" : 3
-    "Autonomous Metal Lab" : 1
+    "Autonomous Metal Lab" : 2
 ```
 
 ---
