@@ -6,7 +6,7 @@ on:
     paths:
       - 'Website/**'
       - 'data/**'
-      - 'CV/build/cv.pdf'
+      - 'CV/**'
       - '.github/workflows/deploy-website.yml'
   workflow_dispatch:
 
@@ -39,14 +39,25 @@ jobs:
       - name: Install dependencies
         run: npm ci || npm install
 
-      - name: Copy CV PDF into public/ (if present)
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Build CV PDF
+        working-directory: ${{ github.workspace }}
         run: |
-          if [ -f "../CV/build/cv.pdf" ]; then
-            cp ../CV/build/cv.pdf public/cv.pdf
-            echo "Copied CV PDF."
-          else
-            echo "CV/build/cv.pdf not found — skipping. The /cv page will show a 404 for the PDF until the CV agent produces it."
-          fi
+          python -m pip install --quiet pyyaml
+          python CV/build_cv.py
+
+      - name: Copy CV PDF into public/
+        run: |
+          mkdir -p public
+          cp ../CV/build/cv.pdf public/cv.pdf
+          echo "Copied CV PDF ($(du -h public/cv.pdf | cut -f1))."
 
       - name: Build site
         run: npm run build
