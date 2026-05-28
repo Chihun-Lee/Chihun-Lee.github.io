@@ -1,0 +1,102 @@
+# Talks & travel — SSOT
+# type: international | domestic
+# role: oral | poster | virtual_poster | invited | keynote
+
+talks:
+  # ── International ────────────────────────────────────────────
+  - title: Inverse Design of Diffraction Fields with Metamask for Three-dimensional Nanopatterning
+    authors: ["C. Lee", "J. Rho"]
+    venue: Metamaterials 2024
+    location: Crete, Greece
+    date: 2024-09
+    role: oral
+    type: international
+
+  - title: Inverse Design of Manufacturable Free-Form Metasurface for Three Dimensional Nanopatterning
+    authors: ["C. Lee", "G. Chang", "G. Bae", "S. Jeon", "J. Rho"]
+    venue: Nano Korea 2023
+    location: Korea
+    date: 2023-07
+    role: oral
+    type: international
+
+  - title: "Diffraction Fields Optimization for Proximity-Field Nanopatterning: Toward High Contrast 3D"
+    authors: ["C. Lee", "G. Chang", "S. Jeon", "J. Rho"]
+    venue: 2023 Materials Research Society Spring Meeting
+    location: San Francisco, USA
+    date: 2023-04
+    role: poster
+    type: international
+
+  - title: Organic Light-emitting Diode Control (OLED) based on Metasurface
+    authors: ["C. Lee", "J. Rho"]
+    venue: Nano Convergence Conference 2021 — 19th International Nanotech Symposium & Exhibition
+    location: Korea
+    date: 2021-07
+    role: virtual_poster
+    type: international
+
+  - title: Development of AI systems for smart injection molding based on digital twin
+    authors: ["C. Lee", "S. Park"]
+    venue: International Injection Moulding Conference (IIMC 2019)
+    location: Aachen, Germany
+    date: 2019-04
+    role: oral
+    type: international
+
+  - title: Deep Neural Network-based approach for warpage and weight prediction of plastic injection molding
+    authors: ["C. Lee", "S. Yoon", "D. Kim", "S. Park"]
+    venue: PM World Congress (PM 2018)
+    location: Beijing, China
+    date: 2018-09
+    role: oral
+    type: international
+
+  - title: Development of bio-inspired piezoelectric hair cell sensor using powder injection molding
+    authors: ["J. Han", "C. Gal", "C. Lee", "J. Cho", "S. Park"]
+    venue: Sixth Asia International Symposium on Mechatronics (AISM 2017)
+    location: Pohang, Korea
+    date: 2017-09
+    role: oral
+    type: international
+
+  # ── Domestic ─────────────────────────────────────────────────
+  - title: 3D Proximity-Field Nanopatterning Control based on Particle Swarm Optimization
+    authors: ["C. Lee", "J. Rho"]
+    venue: KSME Micro/Nano 2022
+    location: Korea
+    date: 2022-05
+    role: oral
+    type: domestic
+
+  - title: Reversed design of metasurface antenna based on artificial neural networks
+    authors: ["C. Lee", "J. Rho"]
+    venue: KSME Micro/Nano 2020
+    location: Korea
+    date: 2021-07
+    role: virtual_poster
+    type: domestic
+
+  - title: Artificial neural network based processing parameter optimization for injection molding
+    authors: ["H. Kwon", "C. Lee", "S. Park"]
+    venue: KSDME Winter Conference 2018
+    location: Korea
+    date: 2018-12
+    role: oral
+    type: domestic
+
+  - title: Development a quality prediction model using deep neural network for injection molding
+    authors: ["C. Lee", "H. Kwon", "D. Kim", "S. Park"]
+    venue: Korean Powder Metallurgy Institute (KPMI)
+    location: Yeosu, Korea
+    date: 2018-03
+    role: oral
+    type: domestic
+
+# Upcoming / planned travel — fill as needed
+travel:
+  - city: Changwon
+    country: Republic of Korea
+    purpose: Home base — KIMS
+    start: 2025-02
+    end: ongoing

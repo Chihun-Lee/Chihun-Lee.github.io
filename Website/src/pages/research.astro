@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import PubItem from '../components/PubItem.astro';
+import { profile, pubsForPillar, projectsForPillar } from '../lib/data';
+---
+<Base title="Research" active="research">
+  <section>
+    <div class="container">
+      <span class="eyebrow">Research</span>
+      <h1 style="font-size: clamp(36px, 5vw, 52px);">Four pillars of optimization-driven design</h1>
+      <p style="max-width: 720px;">{profile.long_bio}</p>
+    </div>
+  </section>
+
+  {profile.research_pillars.map((pillar) => {
+    const pubs = pubsForPillar(pillar.id).sort((a, b) => b.year - a.year);
+    const projs = projectsForPillar(pillar.id);
+    return (
+      <section id={pillar.id} class="research-section">
+        <div class="container">
+          <span class="eyebrow" style={`color: ${pillar.color};`}>{pillar.id.replace(/-/g, ' ')}</span>
+          <h2>{pillar.title}</h2>
+          <div class="kr">{pillar.kr}</div>
+          <p class="research-blurb">{pillar.blurb}</p>
+
+          {projs.length > 0 && (
+            <div class="research-list">
+              <h4>Funded projects</h4>
+              <ul>
+                {projs.map((p) => (
+                  <li>
+                    <strong style="color: var(--ink-primary);">{p.sponsor}</strong> — {p.title}
+                    <span class="muted"> ({p.start} – {p.end})</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {pubs.length > 0 && (
+            <div class="research-list">
+              <h4>Selected publications</h4>
+              {pubs.map((pub) => <PubItem pub={pub} />)}
+            </div>
+          )}
+        </div>
+      </section>
+    );
+  })}
+</Base>

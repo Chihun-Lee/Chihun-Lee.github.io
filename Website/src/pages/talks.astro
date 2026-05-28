@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import { talks, travel } from '../lib/data';
+
+function sortDesc(a: { date: string }, b: { date: string }) {
+  return b.date.localeCompare(a.date);
+}
+
+const international = talks.filter((t) => t.type === 'international').sort(sortDesc);
+const domestic = talks.filter((t) => t.type === 'domestic').sort(sortDesc);
+
+const roleIcon: Record<string, string> = {
+  oral: 'Oral',
+  poster: 'Poster',
+  virtual_poster: 'Virtual',
+  invited: 'Invited',
+  keynote: 'Keynote',
+};
+---
+<Base title="Talks & Travel" active="talks">
+  <section>
+    <div class="container">
+      <span class="eyebrow">Talks & travel</span>
+      <h1>Talks</h1>
+      <p style="max-width: 720px;">Conference presentations and invited talks. Newest first.</p>
+
+      <h2 style="margin-top: 32px;">International</h2>
+      {international.map((t) => (
+        <div class="talk">
+          <div class="talk-date">{t.date}</div>
+          <div>
+            <div class="talk-title">
+              {t.title}
+              <span class="role-badge">{roleIcon[t.role] ?? t.role}</span>
+            </div>
+            <div class="talk-meta">{t.venue} · {t.location}</div>
+          </div>
+        </div>
+      ))}
+
+      <h2 style="margin-top: 56px;">Domestic</h2>
+      {domestic.map((t) => (
+        <div class="talk">
+          <div class="talk-date">{t.date}</div>
+          <div>
+            <div class="talk-title">
+              {t.title}
+              <span class="role-badge">{roleIcon[t.role] ?? t.role}</span>
+            </div>
+            <div class="talk-meta">{t.venue} · {t.location}</div>
+          </div>
+        </div>
+      ))}
+
+      {travel && travel.length > 0 && (
+        <div style="margin-top: 56px;">
+          <h2>Travel</h2>
+          <ul>
+            {travel.map((tr: any) => (
+              <li>
+                <strong style="color: var(--ink-primary);">{tr.city}, {tr.country}</strong>
+                {' — '}{tr.purpose}
+                <span class="muted"> ({tr.start} – {tr.end})</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+</Base>

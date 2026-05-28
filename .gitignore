@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Node / Astro
+node_modules/
+Website/dist/
+Website/.astro/
+Website/.cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# CV outputs
+CV/build/*
+!CV/build/.gitkeep
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Secrets / local-only
+.env
+.env.local
+*.local.yaml
+
+# Reference papers / internal proposals — keep local only
+source/

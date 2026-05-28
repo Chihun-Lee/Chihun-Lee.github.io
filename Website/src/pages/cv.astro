@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { profile } from '../lib/data';
+---
+<Base title="CV" active="cv">
+  <section>
+    <div class="container">
+      <span class="eyebrow">Curriculum Vitae</span>
+      <h1>CV</h1>
+      <p style="max-width: 720px;">
+        Download the full CV as PDF, or view it inline below. The CV is built from the same YAML source of truth as this site.
+      </p>
+      <div style="margin: 24px 0; display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="/cv.pdf" class="btn" download={`${profile.name.replace(/\s+/g, '_')}_CV.pdf`}>Download PDF</a>
+        <a href="/cv.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Open in new tab</a>
+      </div>
+
+      <div style="margin-top: 32px; border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; background: var(--bg-elevated);">
+        <object data="/cv.pdf" type="application/pdf" width="100%" style="height: 90vh; min-height: 600px; display:block;">
+          <p style="padding: 24px;">
+            Your browser cannot embed PDFs. <a href="/cv.pdf">Download the CV</a> instead.
+          </p>
+        </object>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import { profile, news } from '../lib/data';
+
+const topNews = news.slice(0, 5);
+---
+<Base active="home">
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">{profile.title} · {profile.affiliation}</span>
+      <h1>{profile.name}</h1>
+      <p class="hero-bio">{profile.short_bio}</p>
+      <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="/research" class="btn">Research</a>
+        <a href="/publications" class="btn btn-ghost">Publications</a>
+        <a href={profile.links.scholar} target="_blank" rel="noopener" class="btn btn-ghost">Google Scholar</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="metric-value">{profile.scholar_metrics.total_citations}</div>
+          <div class="metric-label">Citations</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">{profile.scholar_metrics.h_index}</div>
+          <div class="metric-label">h-index</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">{profile.scholar_metrics.i10_index}</div>
+          <div class="metric-label">i10-index</div>
+        </div>
+        <div class="metric" style="justify-self:end; margin-left:auto;">
+          <div class="metric-label">Scholar updated</div>
+          <div style="color:var(--ink-secondary); font-size:14px;">{profile.scholar_metrics.last_updated}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="eyebrow">Research</span>
+      <h2>Four pillars</h2>
+      <p style="max-width: 720px;">Optimization-driven design across four interconnected domains. Click any pillar for related publications and projects.</p>
+      <div class="pillar-grid">
+        {profile.research_pillars.map((p) => (
+          <a class="pillar-card" href={`/research#${p.id}`} style={`border-left-color: ${p.color};`}>
+            <h3>{p.title}</h3>
+            <div class="kr">{p.kr}</div>
+            <p>{p.blurb}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="eyebrow">Recent</span>
+      <h2>News</h2>
+      <ul class="news-list">
+        {topNews.map((n) => (
+          <li class="news-item">
+            <div class="news-date">{n.date}</div>
+            <div class="news-text">{n.text}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

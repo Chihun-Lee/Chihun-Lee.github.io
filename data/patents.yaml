@@ -1,0 +1,38 @@
+# Patents — SSOT
+patents:
+  - title: "전기장 조절 기반 3차원 근접장 패터닝용 마스크 설계 장치, 마스크, 마스크의 제조 방법 및 나노 패터닝 장치"
+    title_en: "Electric-field-controlled 3D proximity-field patterning mask design apparatus, mask, manufacturing method, and nanopatterning apparatus"
+    inventors: ["이치헌", "노준석", "전석우", "배광민", "장건호"]
+    number: "10-2023-0135822"
+    jurisdiction: Korea
+    year: 2023
+
+  - title: "메타 광학 소자의 제조 방법, 이를 이용하여 제조된 메타 광학 소자 및 메타 광학 소자를 포함하는 광학 장치"
+    title_en: "Manufacturing method of meta-optical device, meta-optical device, and optical apparatus including the meta-optical device"
+    inventors: ["유재호", "노준석", "김범식", "김영찬", "소순애", "오동교", "이석호", "이치헌"]
+    number: "10-2023-0085299"
+    jurisdiction: Korea
+    assignee: Samsung Display
+    year: 2023
+
+  - title: "열연 코일 온도 편차 최소화를 위한 인공지능 기반 배치 시스템 개발"
+    title_en: "AI-based placement system for minimizing hot-rolled coil temperature deviation"
+    inventors: ["강윤희", "강준석", "최강혁", "노준석", "이치헌", "신다슬", "권혁준"]
+    number: "10-2023-0133116"
+    jurisdiction: Korea
+    assignee: POSCO
+    year: 2023
+
+  - title: "인공지능 기반의 사출성형시스템 및 사출성형 시스템에서의 성형 조건 생성 방법"
+    title_en: "AI-based injection molding system and method for generating molding conditions"
+    inventors: ["유현재", "박경호", "이승철", "이치헌"]
+    number: "WO 2021/049848 A1"
+    jurisdiction: PCT
+    year: 2021
+
+  - title: "자전거용 ABS 장치"
+    title_en: "Anti-lock braking system (ABS) for bicycles"
+    inventors: ["현봉준", "이준호", "박수재", "조시우", "최재령", "김무범", "박재성", "조원주", "이치헌"]
+    number: "10-2017-0027222"
+    jurisdiction: Korea
+    year: 2017

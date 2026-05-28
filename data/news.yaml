@@ -1,0 +1,19 @@
+# Recent news — surfaces on the homepage. Keep newest at the top.
+news:
+  - date: 2026-05-28
+    text: Personal research site, CV, and LinkedIn pipeline live — single YAML source of truth.
+
+  - date: 2025-02
+    text: Joined Korea Institute of Materials Science (KIMS) as Senior Researcher in the Material Data & Analysis Research Division.
+
+  - date: 2025-02
+    text: "Defended Ph.D. at POSTECH (Advisor: Prof. Junsuk Rho)."
+
+  - date: 2025
+    text: "Paper accepted: Benchmarking Optimization Methods for Nanophotonic Applications (Advanced Optical Materials)."
+
+  - date: 2025
+    text: "Paper accepted: Real-Time Hot-Rolled Coil Placement Recommendation System (Advanced Intelligent Systems, with POSCO)."
+
+  - date: 2024-09
+    text: "Oral talk at Metamaterials 2024, Crete — Inverse Design of Diffraction Fields with Metamask."

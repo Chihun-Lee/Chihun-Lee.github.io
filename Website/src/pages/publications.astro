@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import PubItem from '../components/PubItem.astro';
+import { publications, publicationsByYear, profile } from '../lib/data';
+
+const grouped = publicationsByYear(publications);
+const pillars = profile.research_pillars;
+---
+<Base title="Publications" active="publications">
+  <section>
+    <div class="container">
+      <span class="eyebrow">Publications</span>
+      <h1>Selected publications</h1>
+      <p style="max-width: 720px;">
+        Bold names mark me (C. Lee / Chihun Lee). <sup>†</sup> denotes equal contribution; <sup>*</sup> denotes corresponding author.
+        Filter by research pillar:
+      </p>
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="pill active" data-filter="all">All</button>
+        {pillars.map((p) => (
+          <button class="pill" data-filter={p.id}>{p.title}</button>
+        ))}
+      </div>
+
+      <div id="pubs-root">
+        {grouped.map(([year, pubs]) => (
+          <div class="year-group" data-year={year}>
+            <div class="year-heading">{year}</div>
+            {pubs.map((pub) => (
+              <div class="pub-wrap" data-pillar={pub.pillar}>
+                <PubItem pub={pub} />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll('#filter-bar .pill');
+    const items = document.querySelectorAll('.pub-wrap');
+    const groups = document.querySelectorAll('.year-group');
+
+    buttons.forEach((b) =>
+      b.addEventListener('click', () => {
+        buttons.forEach((x) => x.classList.remove('active'));
+        b.classList.add('active');
+        const f = (b as HTMLElement).dataset.filter;
+        items.forEach((it) => {
+          const p = (it as HTMLElement).dataset.pillar;
+          (it as HTMLElement).style.display = f === 'all' || p === f ? '' : 'none';
+        });
+        // Hide year groups with no visible items
+        groups.forEach((g) => {
+          const visible = g.querySelectorAll('.pub-wrap:not([style*="display: none"])').length;
+          (g as HTMLElement).style.display = visible === 0 ? 'none' : '';
+        });
+      }),
+    );
+  </script>
+</Base>

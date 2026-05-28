@@ -1,0 +1,17 @@
+[project]
+name = "chihun-cv-mcp"
+version = "0.1.0"
+description = "FastMCP server for the Chihun Lee CV/SNS SSOT."
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.0",
+    "pyyaml>=6.0",
+    "ruamel.yaml>=0.18",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["server"]

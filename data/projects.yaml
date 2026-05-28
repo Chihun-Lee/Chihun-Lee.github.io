@@ -1,0 +1,57 @@
+# Funded / industry research projects — SSOT
+projects:
+  - title: Development of AI injection molding system having a shorter mold set-up time with minimum 60% probability than an expert
+    sponsor: LS mtron
+    role: Development of AI code
+    start: 2018-01
+    end: 2019-12
+    pillar: manufacturing
+
+  - title: Development of an Optimization Model Based on Numerical Analysis to Minimize the Temperature Deviation of Coil in the Three-Row Curving Yard
+    sponsor: POSCO
+    role: Development of AI code
+    start: 2020-04
+    end: 2021-02
+    pillar: manufacturing
+
+  - title: A Study on the Propagation Transformation using X-band Metasurface Structure
+    sponsor: Hanwha Defense
+    role: Design of metasurface
+    start: 2020-01
+    end: 2021-12
+    pillar: nanophotonics
+
+  - title: Development of metasurface structures that can control the direction of light by conditioning the luminance distribution of OLED light sources
+    sponsor: LG Display
+    role: Design of metasurface
+    start: 2020-03
+    end: 2021-02
+    pillar: nanophotonics
+
+  - title: Development of Ultra High-resolution Metasurface Color Filter for Display
+    sponsor: LG Display
+    role: Design of metasurface
+    start: 2021-12
+    end: 2022-11
+    pillar: nanophotonics
+
+  - title: Design and Development of High-Refractive Polymer-based Visible Light Absorber Metalens with Large Area
+    sponsor: Samsung Display
+    role: Design of metalens
+    start: 2022-04
+    end: 2024-03
+    pillar: nanophotonics
+
+  - title: Development of intelligent root technology with add-on modules
+    sponsor: Korea Institute of Industrial Technology (KITECH)
+    role: Development of AI code
+    start: 2020-02
+    end: 2025-02
+    pillar: manufacturing
+
+  - title: Hologram Printing & Encoding of Super-Depth-3D Pattern (HOPE)
+    sponsor: Korea University
+    role: Design of metasurface
+    start: 2022-04
+    end: 2025-11
+    pillar: nanophotonics

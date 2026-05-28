@@ -1,0 +1,45 @@
+# People — advisors, key collaborators, students.
+# Only listing advisors + active collaborators. Extend freely.
+
+advisors:
+  - name: Prof. Junsuk Rho
+    role: Ph.D. Advisor
+    institution: POSTECH
+    period: 2020–2025
+    website: ""
+
+  - name: Prof. Seongjin Park
+    role: M.S. Advisor
+    institution: POSTECH
+    period: 2018–2019
+    website: ""
+
+  - name: Dr. Dongyoung Park
+    role: Guest Researcher PI
+    institution: KITECH
+    period: 2018
+    website: ""
+
+collaborators:
+  - name: Prof. Seokwoo Jeon
+    institution: Korea University
+    lab: Nanomaterials for Electronics and Optics
+    topic: 3D nanopatterning using metasurface
+
+  - name: Prof. Konrad Kosiba
+    institution: Leibniz IFW Dresden
+    lab: ""
+    topic: Optimization of laser powder bed fusion
+
+  - name: Dr. Pascal Bibow
+    institution: IKV-AACHEN (RWTH Aachen)
+    lab: ""
+    topic: Optimization of injection molding
+
+  - name: Prof. Haejun Chung
+    institution: Hanyang University
+    lab: EM & Intelligent Design
+    topic: Achromatic metalens inverse design using adjoint method
+
+# Students / mentees — fill as you take any.
+students: []

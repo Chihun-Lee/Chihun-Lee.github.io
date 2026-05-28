@@ -1,0 +1,47 @@
+---
+import type { Publication } from '../lib/data';
+import { isMe } from '../lib/data';
+
+interface Props { pub: Publication }
+const { pub } = Astro.props;
+
+const venueLine = [
+  pub.venue,
+  pub.volume ? `vol. ${pub.volume}` : null,
+  pub.issue ? `no. ${pub.issue}` : null,
+  pub.pages ? `pp. ${pub.pages}` : null,
+  pub.year,
+].filter(Boolean).join(', ');
+
+const roleLabel =
+  pub.role === 'first' ? 'First author'
+  : pub.role === 'co_first' ? 'Co-first'
+  : pub.role === 'corresponding' ? 'Corresponding'
+  : 'Co-author';
+---
+<article class="pub">
+  <div class="pub-title">{pub.title}</div>
+  <div class="pub-authors">
+    {pub.authors.map((a, i) => {
+      const clean = a.replace(/[+*]+$/, '').trim();
+      const equal = /\+$/.test(a);
+      const corr = /\*$/.test(a);
+      return (
+        <span>
+          {isMe(a)
+            ? <span class="me">{clean}</span>
+            : <span>{clean}</span>}
+          {equal ? <sup>†</sup> : null}
+          {corr ? <sup>*</sup> : null}
+          {i < pub.authors.length - 1 ? ', ' : ''}
+        </span>
+      );
+    })}
+  </div>
+  <div class="pub-venue">{venueLine}</div>
+  <div style="margin-top:6px;">
+    <span class="pub-tag">{roleLabel}</span>
+    <span class="pub-tag">{pub.pillar.replace(/-/g, ' ')}</span>
+    {pub.industry_partner ? <span class="pub-tag">w/ {pub.industry_partner}</span> : null}
+  </div>
+</article>

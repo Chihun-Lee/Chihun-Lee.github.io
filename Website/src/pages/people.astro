@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import { advisors, collaborators } from '../lib/data';
+---
+<Base title="People" active="people">
+  <section>
+    <div class="container">
+      <span class="eyebrow">People</span>
+      <h1>Advisors and collaborators</h1>
+
+      <h2 style="margin-top: 28px;">Advisors</h2>
+      <div class="people-grid">
+        {advisors.map((p) => (
+          <div class="person-card">
+            <div class="person-name">{p.name}</div>
+            <div class="person-meta">
+              {p.role}{p.role && p.institution ? ' · ' : ''}{p.institution}
+              {p.period ? ` · ${p.period}` : ''}
+            </div>
+            {p.website ? <a href={p.website} target="_blank" rel="noopener" class="person-topic">Website</a> : null}
+          </div>
+        ))}
+      </div>
+
+      <h2 style="margin-top: 56px;">Collaborators</h2>
+      <div class="people-grid">
+        {collaborators.map((p) => (
+          <div class="person-card">
+            <div class="person-name">{p.name}</div>
+            <div class="person-meta">
+              {p.institution}{p.lab ? ` · ${p.lab}` : ''}
+            </div>
+            {p.topic ? <div class="person-topic">{p.topic}</div> : null}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

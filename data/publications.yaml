@@ -1,0 +1,265 @@
+# Publications — SSOT
+# role: first | corresponding | co_first | co
+# pillar: manufacturing | nanophotonics | materials | autonomous-metal-lab
+# Markers from source CV: "+": equal contribution, "*": corresponding
+
+publications:
+  # ── First-author ───────────────────────────────────────────────
+  - id: lee2025-benchmarking
+    title: Benchmarking Optimization Methods Enabling Efficient Designs for Diverse Nanophotonic Applications
+    authors: ["C. Lee+", "J. Rho*"]
+    venue: Advanced Optical Materials
+    volume: "17"
+    pages: "2500195"
+    year: 2025
+    role: first
+    pillar: nanophotonics
+    equal_contribution: true
+    citations: 5
+    doi: ""
+    url: ""
+
+  - id: lee2025-hotrolled
+    title: Real-Time Hot-Rolled Coil Placement Recommendation System with Data-Driven Model
+    authors: ["C. Lee+", "D. Shin", "Y. Kang", "K. Choi", "D. Park*", "J. Rho*"]
+    venue: Advanced Intelligent Systems
+    pages: "2400826"
+    year: 2025
+    role: first
+    pillar: manufacturing
+    equal_contribution: true
+    industry_partner: POSCO
+    citations: 0
+
+  - id: lee2024-metasurface-color
+    title: Inverse-designed metasurface for highly saturated transmissive colors
+    authors: ["C. Lee+", "S. Lee+", "J. Seong", "D. Park*", "J. Rho*"]
+    venue: JOSA B
+    volume: "41"
+    year: 2024
+    role: co_first
+    pillar: nanophotonics
+    equal_contribution: true
+    citations: 24
+
+  - id: noh2023-inverse-review
+    title: "Inverse design meets nanophotonics: From computational optimization to artificial neural network"
+    authors: ["J. Noh+", "T. Badloe+", "C. Lee+", "J. Yun", "S. So", "J. Rho*"]
+    venue: Intelligent Nanotechnology
+    volume: "3"
+    year: 2023
+    role: co_first
+    pillar: nanophotonics
+    equal_contribution: true
+    type: review
+    citations: 22
+
+  - id: lee2022-binary-phase
+    title: Concurrent Optimization of Diffraction Fields from Binary Phase Mask for Three-Dimensional Nanopatterning
+    authors: ["C. Lee+", "G. Chang+", "J. Kim", "G. Hyun", "G. Bae", "S. So", "J. Yun", "J. Seong", "Y. Yang", "D. Park", "S. Jeon*", "J. Rho*"]
+    venue: ACS Photonics
+    volume: "10"
+    issue: "4"
+    year: 2022
+    role: first
+    pillar: nanophotonics
+    equal_contribution: true
+    citations: 22
+
+  - id: moon2022-metalens-tutorial
+    title: "Tutorial on metalenses for advanced flat optics: design, fabrication, and critical considerations"
+    authors: ["S. Moon+", "C. Lee+", "Y. Yang+", "J. Kim", "T. Badloe", "C. Jung", "C. Yoon", "J. Rho*"]
+    venue: Journal of Applied Physics
+    volume: "131"
+    issue: "9"
+    year: 2022
+    role: co_first
+    pillar: nanophotonics
+    equal_contribution: true
+    type: tutorial
+    citations: 62
+
+  - id: lee2020-injection-ann
+    title: Development of artificial neural network system to recommend process conditions of injection molding for various geometries
+    authors: ["C. Lee+", "J. Na", "K. Park", "H. Yu", "J. Kim", "K. Choi", "D. Park", "S. Park", "J. Rho*", "S. Lee*"]
+    venue: Advanced Intelligent Systems
+    volume: "2"
+    issue: "10"
+    year: 2020
+    role: first
+    pillar: manufacturing
+    equal_contribution: true
+    citations: 34
+
+  - id: lee2020-scalable-metasurface
+    title: Scalable and high-throughput top-down manufacturing of optical metasurfaces
+    authors: ["T. Lee+", "C. Lee+", "D. Oh", "T. Badloe", "J. Oh", "J. Rho*"]
+    venue: Sensors
+    volume: "20"
+    issue: "15"
+    year: 2020
+    role: co_first
+    pillar: nanophotonics
+    equal_contribution: true
+    citations: 60
+
+  - id: shin2019-cold-compaction
+    title: Analysis of cold compaction for Fe-C, Fe-C-Cu powder design based on constitutive relation and artificial neural networks
+    authors: ["D. Shin+", "C. Lee+", "S. Kim", "D. Park", "J. Oh", "C. Gal", "J. Koo", "S. Park", "S. Lee*"]
+    venue: Powder Technology
+    volume: "353"
+    issue: "15"
+    year: 2019
+    role: co_first
+    pillar: materials
+    equal_contribution: true
+    citations: 18
+
+  # ── Co-author ──────────────────────────────────────────────────
+  - id: jung2025-latent-diffusion
+    title: Multi-fidelity learning-based latent diffusion model for three-dimensional inverse microstructure design of dual phase steels
+    authors: ["J. Jung+", "S. Oh", "H. Kim", "J. Na", "SJ. Bae", "C. Lee", "SJ. Kim", "HW. Lee*"]
+    venue: Materials & Design
+    volume: "258"
+    pages: "114623"
+    year: 2025
+    role: co
+    pillar: materials
+    citations: 4
+
+  - id: seong2025-crystalline-hybrid
+    title: Structurally reordered crystalline atomic layer-dielectric hybrid metasurfaces for near-unity efficiency in the visible
+    authors: ["J. Seong+", "Y. Yang+", "Y. Jeon", "C. Lee", "J. An", "J. Rho*"]
+    venue: Materials Today
+    volume: "88"
+    pages: "137"
+    year: 2025
+    role: co
+    pillar: nanophotonics
+    citations: 7
+
+  - id: ko2024-radiative-cooler
+    title: Neutral-Colored Transparent Radiative Cooler by Tailoring Solar Absorption with Punctured Bragg Reflectors
+    authors: ["B. Ko+", "J. Noh+", "D. Chae", "C. Lee", "H. Lim", "H. Lee", "J. Rho*"]
+    venue: Advanced Functional Materials
+    pages: "2410613"
+    year: 2024
+    role: co
+    pillar: nanophotonics
+    citations: 34
+
+  - id: keawmuang2024-colored-cooler
+    title: Inverse design of colored daytime radiative coolers using deep neural networks
+    authors: ["H. Keawmuang+", "T. Badloe+", "C. Lee", "J. Park", "J. Rho*"]
+    venue: Solar Energy Materials and Solar Cells
+    volume: "271"
+    pages: "112848"
+    year: 2024
+    role: co
+    pillar: nanophotonics
+    citations: 27
+
+  - id: gal2023-rheology
+    title: Rheological Behavior of Water-atomized 316L Stainless Steel Powder depending on Particle Size
+    authors: ["C. Gal+", "D. Shin", "C. Lee", "S. Park*", "D. Park"]
+    venue: Metals and Materials International
+    volume: "29"
+    pages: "3329-3339"
+    year: 2023
+    role: co
+    pillar: materials
+    citations: 6
+
+  - id: cho2022-superhydrophilic
+    title: Mass production of superhydrophilic micropatterned copper surfaces using powder injection molding process
+    authors: ["H. Cho+", "J. Park", "J. Kim", "C. Lee", "D. Park", "J. Rho*", "S. Park*"]
+    venue: Powder Technology
+    volume: "411"
+    pages: "117779"
+    year: 2022
+    role: co
+    pillar: manufacturing
+    citations: 3
+
+  - id: so2023-multicolor-3d-hologram
+    title: Multicolor and 3D holography realized by inverse design of single-celled metasurfaces
+    authors: ["S. So+", "J. Kim+", "T. Badloe", "C. Lee", "Y. Yang", "H. Kang", "J. Rho*"]
+    venue: Advanced Materials
+    pages: "2208520"
+    year: 2023
+    role: co
+    pillar: nanophotonics
+    citations: 271
+
+  - id: noh2021-transmissive-antenna
+    title: Design of a transmissive metasurface antenna using deep neural networks
+    authors: ["J. Noh+", "Y. Nam+", "S. So", "C. Lee", "S. Lee", "Y. Kim", "T. Kim", "J. Lee", "J. Rho*"]
+    venue: Optical Materials Express
+    volume: "11"
+    issue: "7"
+    year: 2021
+    role: co
+    pillar: nanophotonics
+    citations: 59
+
+  - id: shin2021-lpbf-ti
+    title: Optimizing laser powder bed fusion of Ti-5Al-5V-5Mo-3Cr by artificial intelligence
+    authors: ["D. Shin+", "C. Lee+", "U. Kühn", "S. Lee", "S. Park", "H. Schwab", "S. Scudino", "K. Kosiba*"]
+    venue: Journal of Alloys and Compounds
+    volume: "862"
+    pages: "158018"
+    year: 2021
+    role: co_first
+    pillar: autonomous-metal-lab
+    citations: 62
+    equal_contribution: true
+
+  - id: shin2019-fe-c-correlation
+    title: Correlation Study Between Material Parameters and Mechanical Properties of Iron–Carbon Compacts Using Sensitivity Analysis and Regression Model
+    authors: ["D. Shin+", "S. Kim", "J. Oh", "I. Jung", "W. Yang", "C. Lee", "H. Kwon", "J. Koo", "S. Park*"]
+    venue: Metals and Materials International
+    volume: "25"
+    pages: "1258"
+    year: 2019
+    role: co
+    pillar: materials
+    citations: 6
+
+  # ── Newly added from Scholar 2026-05-28 ───────────────────────
+  - id: phan2026-stable-diffusion-microstructure
+    title: Parameter-aware high-fidelity microstructure generation using stable diffusion
+    authors: ["HC. Phan", "MT. Tran", "C. Lee", "H. Kim", "S. Oh", "DK. Kim", "HW. Lee*"]
+    venue: Advanced Engineering Informatics
+    year: 2026
+    role: co
+    pillar: materials
+    citations: 1
+
+  - id: park2023-mrs-coolers
+    title: Utilizing Deep Neural Networks for the Inverse Design of Multilayered Daytime Radiative Coolers with Customizable Colors
+    authors: ["J. Park", "H. Keawmuang", "T. Badloe", "C. Lee", "J. Rho*"]
+    venue: Materials Research Society (MRS) Proceedings
+    year: 2023
+    role: co
+    pillar: nanophotonics
+    citations: 0
+
+  - id: park-ann-additive-recommender
+    title: Artificial Neural Network-Based Process Recommender System for Additive Manufacturing
+    authors: ["D. Park*", "H. Lee", "H. Song", "KJ. Cha", "SK. Hwang", "C. Lee"]
+    venue: "TBD"  # TODO: fill venue/year from publisher record
+    year: 2024
+    role: co
+    pillar: autonomous-metal-lab
+    citations: 0
+    notes: "Venue and year to be confirmed."
+
+  - id: park-brazed-sus304
+    title: Quantitative Correlation between Brazed SUS304/MBF60 via Image Processing and Bonding Temperature
+    authors: ["HJ. Park", "SM. Park", "C. Lee", "SK. Lee", "J. Kim", "J. Jang", "CW. Park", "D. Park*"]
+    venue: "TBD"  # TODO: fill venue/year
+    year: 2024
+    role: co
+    pillar: materials
+    citations: 0
+    notes: "Venue and year to be confirmed."

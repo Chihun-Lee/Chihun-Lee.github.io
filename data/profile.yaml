@@ -1,0 +1,176 @@
+# Single source of truth: identity & affiliations
+# Edit this file → everything (CV, Website, LinkedIn) re-derives.
+
+name: Chihun Lee
+name_kr: 이치헌
+honorific: Ph.D.
+title: Senior Researcher
+affiliation: Korea Institute of Materials Science (KIMS)
+affiliation_kr: 한국재료연구원
+division: Material Data & Analysis Research Division
+nationality: Republic of Korea
+
+contact:
+  email: chihunlee@kims.re.kr
+  office_phone: "+82-54-280-3181"
+  mobile: "+82-10-9497-6669"
+  location: Changwon, Republic of Korea
+
+links:
+  scholar: https://scholar.google.com/citations?user=Na1nYPsAAAAJ
+  github: https://github.com/Chihun-Lee
+  orcid: ""           # fill in if available
+  linkedin: https://www.linkedin.com/in/%EC%B9%98%ED%97%8C-%EC%9D%B4-078082412/
+  website: https://chihun-lee.github.io
+
+scholar_metrics:
+  total_citations: 733
+  h_index: 12
+  i10_index: 12
+  last_updated: 2026-05-28
+
+short_bio: >
+  Senior Researcher at the Korea Institute of Materials Science (KIMS), working at
+  the intersection of artificial intelligence and physical sciences. My research
+  focuses on optimization-driven design across four interconnected domains:
+  manufacturing processes, nanophotonic devices, materials, and autonomous
+  experimentation for metals. I build AI toolkits that turn data and physics into
+  manufacturable designs.
+
+long_bio: >
+  I am a Senior Researcher at the Material Data & Analysis Research Division of
+  the Korea Institute of Materials Science (KIMS). I earned my Ph.D. (2025), M.S.
+  (2019), and B.S. (2018) in Mechanical Engineering from POSTECH, advised by
+  Prof. Junsuk Rho (Ph.D.) and Prof. Seongjin Park (M.S.). My research builds
+  end-to-end AI/optimization pipelines spanning the four pillars of (i)
+  manufacturing process optimization, (ii) nanophotonic inverse design,
+  (iii) materials property optimization, and (iv) autonomous experimentation
+  for metal alloys. I co-develop AI codes with industry partners (POSCO, LG
+  Display, Samsung Display, Hanwha Defense, LS mtron) and academic labs
+  (Korea Univ., Hanyang Univ., Leibniz IFW Dresden, IKV-AACHEN).
+
+research_interests:
+  - AI for materials
+  - AI for manufacturing
+  - Metamaterials and nanophotonic inverse design
+  - Autonomous experimentation for metals
+
+# Four pillars used for grouping on the website
+research_pillars:
+  - id: manufacturing
+    title: Manufacturing Optimization
+    kr: 제조 최적화
+    color: "#CC785C"   # Crail / Claude accent
+    blurb: >
+      Data-driven and physics-informed optimization for injection molding, hot-rolled
+      coil placement, punch press, drilling, DED metal 3D printing, powder injection
+      molding, and powder manufacturing. The goal is to shorten process set-up time
+      and minimize defects through learned process–property models.
+  - id: nanophotonics
+    title: Nanophotonics Optimization
+    kr: 나노포토닉스 최적화
+    color: "#B8956A"   # warm bronze
+    blurb: >
+      Inverse design of metasurfaces and metamaterials — color filters, achromatic
+      metalenses, meta-holograms, transmissive antennas, OLED light control, and
+      3D nanopatterning masks. I combine adjoint methods, automatic differentiation,
+      neural surrogates, and global optimizers (PSO, GA, CMA-ES, DDQN, GP).
+  - id: materials
+    title: Materials Optimization
+    kr: 소재 최적화
+    color: "#7A8C7E"   # sage
+    blurb: >
+      AI-driven materials design and property prediction — cold compaction of
+      Fe–C/Fe–C–Cu powders, latent diffusion for dual-phase steel microstructures,
+      and stainless steel powder rheology. Built on top of constitutive relations
+      and learned microstructure–property maps.
+  - id: autonomous-metal-lab
+    title: Metal Autonomous Laboratory
+    kr: 금속 자율실험실
+    color: "#5C6B7A"   # cool slate
+    blurb: >
+      Closing the loop between simulation, optimization, and physical experiment
+      for metal alloys. Active learning, Bayesian optimization with Gaussian
+      processes, and orchestrated experimentation drive efficient discovery of
+      laser powder bed fusion parameters and beyond.
+
+education:
+  - degree: Ph.D.
+    field: Mechanical Engineering
+    institution: Pohang University of Science and Technology (POSTECH)
+    advisor: Prof. Junsuk Rho
+    start: 2020-02
+    end: 2025-02
+  - degree: M.S.
+    field: Mechanical Engineering
+    institution: Pohang University of Science and Technology (POSTECH)
+    advisor: Prof. Seongjin Park
+    start: 2018-03
+    end: 2019-08
+  - degree: B.S.
+    field: Mechanical Engineering
+    institution: Pohang University of Science and Technology (POSTECH)
+    start: 2013-03
+    end: 2018-02
+
+experience:
+  - role: Senior Researcher
+    org: Korea Institute of Materials Science (KIMS)
+    division: Material Data & Analysis Research Division
+    start: 2025-02
+    end: present
+  - role: Technical Research Personnel (Alternative Military Service)
+    org: POSTECH
+    start: 2022-02
+    end: 2025-02
+  - role: Guest Researcher
+    org: Korea Institute of Industrial Technology (KITECH)
+    pi: Dr. Dongyoung Park
+    start: 2018-08
+    end: 2018-12
+
+specializations:
+  forward_simulation:
+    - RCWA (in-house MATLAB)
+    - FDTD (Lumerical, MEEP)
+    - FEM (COMSOL)
+    - Bulk optics (VirtualLab Fusion)
+    - Scalar diffraction (in-house MATLAB)
+  learning_and_optimization:
+    - PyTorch, TensorFlow
+    - Searching, PSO, Genetic, CMA-ES
+    - Adjoint method, Automatic differentiation, Gradient
+    - DDQN, Simulated Annealing
+    - Gaussian Process (Bayesian Optimization)
+  manufacturing_apps:
+    - Injection molding
+    - Hot-rolled coil placement
+    - Punch press, Drilling
+    - DED metal 3D printing
+    - Powder injection molding, Powder manufacturing
+  nanophotonics_apps:
+    - LED simulation and collimation
+    - 3D patterning mask design
+    - Color filter
+    - Nano antenna
+    - Achromatic metalens
+    - Meta-hologram
+    - Beam forming
+
+collaborations:
+  - lab: Nanomaterials for Electronics and Optics Lab
+    institution: Korea University
+    pi: Prof. Seokwoo Jeon
+    topic: 3D nanopatterning using metasurface
+  - lab: Leibniz IFW Dresden
+    institution: Leibniz IFW Dresden
+    pi: Prof. Konrad Kosiba
+    topic: Optimization of laser powder bed fusion
+  - lab: IKV-AACHEN
+    institution: RWTH Aachen
+    pi: Dr. Pascal Bibow
+    topic: Optimization of injection molding
+  - lab: EM & Intelligent Design
+    institution: Hanyang University
+    pi: Prof. Haejun Chung
+    topic: Achromatic metalens inverse design using adjoint method
