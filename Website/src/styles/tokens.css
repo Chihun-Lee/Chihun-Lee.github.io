@@ -227,20 +227,17 @@ footer {
 .hero h1 { margin-bottom: 24px; }
 .hero-inner { display: flex; gap: 56px; align-items: center; }
 .hero-text { flex: 1; min-width: 0; }
-.hero-portrait {
+.hero-art {
   flex-shrink: 0;
-  width: 240px;
+  width: 300px;
   height: 300px;
-  object-fit: cover;
-  object-position: top center;
   border-radius: 16px;
   border: 1px solid var(--rule);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
-@media (max-width: 720px) {
-  .hero-inner { flex-direction: column-reverse; align-items: flex-start; gap: 28px; }
-  .hero-portrait { width: 160px; height: 200px; }
+@media (max-width: 760px) {
+  .hero-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+  .hero-art { width: 100%; max-width: 360px; height: auto; aspect-ratio: 1 / 1; }
 }
 .hero-bio {
   font-size: 19px;
@@ -407,6 +404,50 @@ footer {
 .person-name { font-family: var(--font-display); font-size: 18px; color: var(--ink-primary); margin-bottom: 2px; }
 .person-meta { font-size: 13px; color: var(--ink-muted); margin-bottom: 8px; }
 .person-topic { font-size: 14px; color: var(--ink-secondary); }
+
+/* Lead (group header) */
+.lead-card {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-top: 28px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+}
+.lead-photo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+}
+.lead-name { font-family: var(--font-display); font-size: 24px; color: var(--ink-primary); }
+.lead-name-kr { font-size: 16px; color: var(--ink-muted); margin-left: 10px; }
+.lead-role { font-size: 15px; color: var(--accent); margin: 4px 0 2px; }
+.lead-bio { margin-top: 12px; max-width: 560px; }
+
+/* Person card with photo (interns) */
+.person-card--photo { display: flex; gap: 16px; align-items: flex-start; }
+.person-photo {
+  flex-shrink: 0;
+  width: 72px;
+  height: 96px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+}
+.person-name-kr { font-size: 14px; color: var(--ink-muted); margin-left: 8px; }
+.person-period { font-size: 13px; color: var(--ink-muted); font-variant-numeric: tabular-nums; margin-bottom: 8px; }
+.person-bio { font-size: 14px; color: var(--ink-secondary); margin: 0; }
+
+@media (max-width: 540px) {
+  .lead-card { flex-direction: column; }
+}
 
 /* Research */
 .research-section { padding-top: 28px; }

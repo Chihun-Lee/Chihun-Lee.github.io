@@ -1,14 +1,51 @@
 ---
 import Base from '../layouts/Base.astro';
-import { advisors, collaborators } from '../lib/data';
+import { lead, students, advisors, collaborators } from '../lib/data';
 ---
 <Base title="People" active="people">
   <section>
     <div class="container">
       <span class="eyebrow">People</span>
-      <h1>Advisors and collaborators</h1>
+      <h1>Group</h1>
 
-      <h2 style="margin-top: 28px;">Advisors</h2>
+      <div class="lead-card">
+        <img class="lead-photo" src={lead.photo} alt={lead.name} width="160" height="200" />
+        <div class="lead-body">
+          <div class="lead-name">
+            {lead.name}
+            {lead.name_kr ? <span class="lead-name-kr">{lead.name_kr}</span> : null}
+          </div>
+          <div class="lead-role">{lead.role}</div>
+          <div class="person-meta">{lead.institution}</div>
+          <p class="lead-bio">{lead.bio}</p>
+        </div>
+      </div>
+
+      {students.length > 0 && (
+        <>
+          <h2 style="margin-top: 56px;">Research Interns</h2>
+          <div class="people-grid">
+            {students.map((p) => (
+              <div class="person-card person-card--photo">
+                {p.photo ? <img class="person-photo" src={p.photo} alt={p.name} width="72" height="96" /> : null}
+                <div>
+                  <div class="person-name">
+                    {p.name}
+                    {p.name_kr ? <span class="person-name-kr">{p.name_kr}</span> : null}
+                  </div>
+                  <div class="person-meta">
+                    {p.role}{p.role && p.institution ? ' · ' : ''}{p.institution}
+                  </div>
+                  {p.period ? <div class="person-period">{p.period}</div> : null}
+                  {p.bio ? <p class="person-bio">{p.bio}</p> : null}
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      <h2 style="margin-top: 56px;">Advisors</h2>
       <div class="people-grid">
         {advisors.map((p) => (
           <div class="person-card">

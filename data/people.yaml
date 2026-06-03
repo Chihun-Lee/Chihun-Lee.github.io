@@ -1,5 +1,17 @@
-# People — advisors, key collaborators, students.
+# People — lab lead, interns, advisors, key collaborators.
 # Only listing advisors + active collaborators. Extend freely.
+
+# Lab lead (group page header). Profile photo is used here only.
+lead:
+  name: Dr. Chihun Lee
+  name_kr: 이치헌
+  role: Senior Researcher (KIMS) · Assistant Professor (UST)
+  institution: Material Data & Analysis Research Division, KIMS
+  photo: /assets/chihun.png
+  bio: >
+    Leads AI- and optimization-driven research across manufacturing, nanophotonics,
+    materials, and autonomous experimentation for metals at the Korea Institute of
+    Materials Science (KIMS).
 
 advisors:
   - name: Prof. Junsuk Rho
@@ -41,5 +53,23 @@ collaborators:
     lab: EM & Intelligent Design
     topic: Achromatic metalens inverse design using adjoint method
 
-# Students / mentees — fill as you take any.
-students: []
+# Research interns.
+students:
+  - name: Hyunho Kim
+    name_kr: 김현호
+    role: Research Intern
+    institution: Mechanical Engineering, Changwon National University (3rd year)
+    period: 2026.03.02 ~
+    photo: /assets/kim-hyunho.png
+    bio: >
+      Mechanical engineering undergraduate with hands-on CAD/CATIA, Python, and MATLAB
+      experience; interested in solid/materials mechanics and engineering data analysis.
+  - name: Jinyoung Lee
+    name_kr: 이진영
+    role: Research Intern
+    institution: Mechanical Engineering, Changwon National University (2nd year)
+    period: 2026.03.02 ~
+    photo: /assets/lee-jinyoung.png
+    bio: >
+      Mechanical engineering undergraduate experienced with CATIA, Fusion 360, and Arduino;
+      interested in materials, semiconductor design, and data visualization.

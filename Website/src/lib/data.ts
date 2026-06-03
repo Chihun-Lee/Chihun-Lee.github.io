@@ -113,12 +113,15 @@ export interface NewsItem {
 
 export interface Person {
   name: string;
+  name_kr?: string;
   role?: string;
   institution: string;
   period?: string;
   lab?: string;
   topic?: string;
   website?: string;
+  photo?: string;
+  bio?: string;
 }
 
 export interface Patent {
@@ -141,9 +144,13 @@ const talksFile = load<{ talks: Talk[]; travel: any[] }>('talks.yaml');
 export const talks: Talk[] = talksFile.talks;
 export const travel = talksFile.travel;
 export const news: NewsItem[] = load<{ news: NewsItem[] }>('news.yaml').news;
-const peopleFile = load<{ advisors: Person[]; collaborators: Person[]; students: Person[] }>(
-  'people.yaml',
-);
+const peopleFile = load<{
+  lead: Person;
+  advisors: Person[];
+  collaborators: Person[];
+  students: Person[];
+}>('people.yaml');
+export const lead = peopleFile.lead;
 export const advisors = peopleFile.advisors;
 export const collaborators = peopleFile.collaborators;
 export const students = peopleFile.students;
