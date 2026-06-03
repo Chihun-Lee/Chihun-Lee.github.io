@@ -225,6 +225,23 @@ footer {
 /* Hero */
 .hero { padding: 96px 0 64px; }
 .hero h1 { margin-bottom: 24px; }
+.hero-inner { display: flex; gap: 56px; align-items: center; }
+.hero-text { flex: 1; min-width: 0; }
+.hero-portrait {
+  flex-shrink: 0;
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+@media (max-width: 720px) {
+  .hero-inner { flex-direction: column-reverse; align-items: flex-start; gap: 28px; }
+  .hero-portrait { width: 160px; height: 200px; }
+}
 .hero-bio {
   font-size: 19px;
   line-height: 1.65;

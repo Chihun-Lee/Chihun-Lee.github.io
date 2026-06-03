@@ -7,13 +7,18 @@ const topNews = news.slice(0, 5);
 <Base active="home">
   <section class="hero">
     <div class="container">
-      <span class="eyebrow">{profile.title} · {profile.affiliation}</span>
-      <h1>{profile.name}</h1>
-      <p class="hero-bio">{profile.short_bio}</p>
-      <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a href="/research" class="btn">Research</a>
-        <a href="/publications" class="btn btn-ghost">Publications</a>
-        <a href={profile.links.scholar} target="_blank" rel="noopener" class="btn btn-ghost">Google Scholar</a>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="eyebrow">{profile.title} · {profile.affiliation}</span>
+          <h1>{profile.name}</h1>
+          <p class="hero-bio">{profile.short_bio}</p>
+          <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="/research" class="btn">Research</a>
+            <a href="/publications" class="btn btn-ghost">Publications</a>
+            <a href={profile.links.scholar} target="_blank" rel="noopener" class="btn btn-ghost">Google Scholar</a>
+          </div>
+        </div>
+        <img class="hero-portrait" src="/assets/chihun.png" alt={profile.name} width="240" height="300" />
       </div>
 
       <div class="hero-metrics">

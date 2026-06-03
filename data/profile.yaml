@@ -114,6 +114,11 @@ education:
     end: 2018-02
 
 experience:
+  - role: Assistant Professor
+    org: University of Science and Technology (UST), KIMS Campus
+    division: Advanced Materials Engineering
+    start: 2026-09
+    end: present
   - role: Senior Researcher
     org: Korea Institute of Materials Science (KIMS)
     division: Material Data & Analysis Research Division
