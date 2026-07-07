@@ -3,23 +3,61 @@ import Base from '../layouts/Base.astro';
 import { profile, news } from '../lib/data';
 
 const topNews = news.slice(0, 5);
+
+// Display grouping: three AI-optimization pillars on the homepage.
+// (SSOT keeps 4 pillar ids; materials + autonomous-metal-lab surface together
+//  as "Metal Alloy Discovery".)
+const byId = Object.fromEntries(profile.research_pillars.map((p) => [p.id, p]));
+const pillars3 = [
+  {
+    ...byId['nanophotonics'],
+    href: '/research#nanophotonics',
+  },
+  {
+    ...byId['manufacturing'],
+    href: '/research#manufacturing',
+  },
+  {
+    id: 'metal-alloy-discovery',
+    title: 'Metal Alloy Discovery',
+    kr: '금속 소재 발견 · 자율실험실',
+    color: byId['autonomous-metal-lab'].color,
+    blurb:
+      'AI-driven discovery of metal alloys — microstructure–property models, latent generative ' +
+      'models, and a self-driving laboratory where an AI agent plans compositions, drives DED ' +
+      'printing and robotic characterization, and learns from every experiment.',
+    href: '/research#metal-alloy-discovery',
+  },
+];
 ---
 <Base active="home">
   <section class="hero">
     <div class="container">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <span class="eyebrow">{profile.title} · {profile.affiliation}</span>
-          <h1>{profile.name}</h1>
-          <p class="hero-bio">{profile.short_bio}</p>
-          <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
-            <a href="/research" class="btn">Research</a>
-            <a href="/publications" class="btn btn-ghost">Publications</a>
-            <a href={profile.links.scholar} target="_blank" rel="noopener" class="btn btn-ghost">Google Scholar</a>
-          </div>
+      <div class="hero-text">
+        <span class="eyebrow">{profile.title} · {profile.affiliation}</span>
+        <h1>{profile.name}</h1>
+        <p class="hero-bio">
+          Welcome. I build AI agents that run the scientific loop end to end. At KIMS I am
+          building a <strong>metal-alloy self-driving laboratory (SDL)</strong> — an AI agent
+          plans alloy compositions, drives multi-powder DED metal 3D printing and robotic
+          characterization, and learns from every experiment to close the design–build–test
+          cycle. The same optimization toolkit powers three pillars: nanophotonics,
+          manufacturing, and metal alloy discovery.
+        </p>
+        <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="/research" class="btn">Research</a>
+          <a href="/publications" class="btn btn-ghost">Publications</a>
+          <a href={profile.links.scholar} target="_blank" rel="noopener" class="btn btn-ghost">Google Scholar</a>
         </div>
-        <img class="hero-art" src="/assets/research-hero.png" alt="Abstract synthesis of the four research pillars" width="300" height="300" />
       </div>
+
+      <img
+        class="hero-banner"
+        src="/assets/sdl-hero.png"
+        alt="Overview figure: AI-based optimization powers nanophotonics and manufacturing, while an AI agent drives the metal-alloy self-driving lab — a closed loop of raw powders, DED printing, heat treatment, tensile testing, and SEM/XRD"
+        width="1600"
+        height="970"
+      />
 
       <div class="hero-metrics">
         <div class="metric">
@@ -45,11 +83,11 @@ const topNews = news.slice(0, 5);
   <section>
     <div class="container">
       <span class="eyebrow">Research</span>
-      <h2>Four pillars</h2>
-      <p style="max-width: 720px;">Optimization-driven design across four interconnected domains. Click any pillar for related publications and projects.</p>
+      <h2>Three pillars of AI optimization</h2>
+      <p style="max-width: 720px;">Optimization-driven design across three interconnected domains. Click any pillar for related publications and projects.</p>
       <div class="pillar-grid">
-        {profile.research_pillars.map((p) => (
-          <a class="pillar-card" href={`/research#${p.id}`} style={`border-left-color: ${p.color};`}>
+        {pillars3.map((p) => (
+          <a class="pillar-card" href={p.href} style={`border-left-color: ${p.color};`}>
             <h3>{p.title}</h3>
             <div class="kr">{p.kr}</div>
             <p>{p.blurb}</p>
@@ -71,6 +109,9 @@ const topNews = news.slice(0, 5);
           </li>
         ))}
       </ul>
+      <div style="margin-top: 24px;">
+        <a href="/news" class="btn btn-ghost">All news</a>
+      </div>
     </div>
   </section>
 </Base>

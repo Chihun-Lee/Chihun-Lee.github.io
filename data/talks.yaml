@@ -4,6 +4,14 @@
 
 talks:
   # ── International ────────────────────────────────────────────
+  - title: "Compressing the Validation Bottleneck: An Agentic Self-Driving Lab for Scientific Discovery"
+    authors: ["K. Hur", "C. Lee"]
+    venue: ICML 2026 AI4Science Workshop
+    location: Seoul, Korea
+    date: 2026-07
+    role: poster
+    type: international
+
   - title: Inverse Design of Diffraction Fields with Metamask for Three-dimensional Nanopatterning
     authors: ["C. Lee", "J. Rho"]
     venue: Metamaterials 2024
@@ -93,8 +101,50 @@ talks:
     role: oral
     type: domestic
 
-# Upcoming / planned travel — fill as needed
+# Travel — synced from KIMS EKP 출장내역 (2026-07-07). Newest first.
 travel:
+  - city: Seoul
+    country: Republic of Korea
+    purpose: ICML 2026 — conference attendance & AI4Science Workshop poster presentation
+    start: 2026-07-07
+    end: 2026-07-11
+
+  - city: Singapore
+    country: Singapore
+    purpose: AI4X–Accelerate Conference 2026 (incl. self-driving-lab tutorials)
+    start: 2026-06-14
+    end: 2026-06-20
+
+  - city: Jinju
+    country: Republic of Korea
+    purpose: AMDS 2026 organizing committee meeting
+    start: 2026-06-08
+    end: 2026-06-08
+
+  - city: Seoul
+    country: Republic of Korea
+    purpose: Self-driving laboratory site visit — SDL & DED printer deployment benchmarking
+    start: 2026-05-21
+    end: 2026-05-21
+
+  - city: Seoul
+    country: Republic of Korea
+    purpose: KIMS 50th Anniversary Materials Research Forum & AI EXPO 2026
+    start: 2026-05-07
+    end: 2026-05-08
+
+  - city: Jeju
+    country: Republic of Korea
+    purpose: Korean Institute of Metals and Materials (KIM) Spring Meeting 2026
+    start: 2026-04-27
+    end: 2026-04-30
+
+  - city: Seoul
+    country: Republic of Korea
+    purpose: AI Winter Short Course Program 2026
+    start: 2026-02-25
+    end: 2026-02-27
+
   - city: Changwon
     country: Republic of Korea
     purpose: Home base — KIMS

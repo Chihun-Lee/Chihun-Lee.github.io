@@ -12,7 +12,8 @@ const DATA_DIR = path.resolve(__dirname, '../../../data');
 function load<T>(file: string): T {
   const p = path.join(DATA_DIR, file);
   const raw = fs.readFileSync(p, 'utf8');
-  return yaml.load(raw) as T;
+  // JSON_SCHEMA: keep ISO dates (e.g. 2026-07-07) as plain strings, not Date objects.
+  return yaml.load(raw, { schema: yaml.JSON_SCHEMA }) as T;
 }
 
 // ── Types ────────────────────────────────────────────────────────────

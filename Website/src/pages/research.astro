@@ -2,26 +2,65 @@
 import Base from '../layouts/Base.astro';
 import PubItem from '../components/PubItem.astro';
 import { profile, pubsForPillar, projectsForPillar } from '../lib/data';
+import type { PillarId } from '../lib/data';
+
+// Display grouping: three AI-optimization pillars.
+// SSOT keeps 4 pillar ids; materials + autonomous-metal-lab render together
+// as "Metal Alloy Discovery".
+const byId = Object.fromEntries(profile.research_pillars.map((p) => [p.id, p]));
+const groups: Array<{
+  id: string;
+  title: string;
+  kr: string;
+  color: string;
+  blurbs: string[];
+  pillarIds: PillarId[];
+}> = [
+  {
+    id: 'nanophotonics',
+    title: byId['nanophotonics'].title,
+    kr: byId['nanophotonics'].kr,
+    color: byId['nanophotonics'].color,
+    blurbs: [byId['nanophotonics'].blurb],
+    pillarIds: ['nanophotonics'],
+  },
+  {
+    id: 'manufacturing',
+    title: byId['manufacturing'].title,
+    kr: byId['manufacturing'].kr,
+    color: byId['manufacturing'].color,
+    blurbs: [byId['manufacturing'].blurb],
+    pillarIds: ['manufacturing'],
+  },
+  {
+    id: 'metal-alloy-discovery',
+    title: 'Metal Alloy Discovery',
+    kr: '금속 소재 발견 · 자율실험실',
+    color: byId['autonomous-metal-lab'].color,
+    blurbs: [byId['materials'].blurb, byId['autonomous-metal-lab'].blurb],
+    pillarIds: ['materials', 'autonomous-metal-lab'],
+  },
+];
 ---
 <Base title="Research" active="research">
   <section>
     <div class="container">
       <span class="eyebrow">Research</span>
-      <h1 style="font-size: clamp(36px, 5vw, 52px);">Four pillars of optimization-driven design</h1>
+      <h1 style="font-size: clamp(36px, 5vw, 52px);">Three pillars of AI optimization</h1>
       <p style="max-width: 720px;">{profile.long_bio}</p>
     </div>
   </section>
 
-  {profile.research_pillars.map((pillar) => {
-    const pubs = pubsForPillar(pillar.id).sort((a, b) => b.year - a.year);
-    const projs = projectsForPillar(pillar.id);
+  {groups.map((g) => {
+    const pubs = g.pillarIds.flatMap((id) => pubsForPillar(id)).sort((a, b) => b.year - a.year);
+    const projs = g.pillarIds.flatMap((id) => projectsForPillar(id));
     return (
-      <section id={pillar.id} class="research-section">
+      <section id={g.id} class="research-section">
         <div class="container">
-          <span class="eyebrow" style={`color: ${pillar.color};`}>{pillar.id.replace(/-/g, ' ')}</span>
-          <h2>{pillar.title}</h2>
-          <div class="kr">{pillar.kr}</div>
-          <p class="research-blurb">{pillar.blurb}</p>
+          <span class="eyebrow" style={`color: ${g.color};`}>{g.id.replace(/-/g, ' ')}</span>
+          <h2>{g.title}</h2>
+          <div class="kr">{g.kr}</div>
+          {g.blurbs.map((b) => <p class="research-blurb">{b}</p>)}
 
           {projs.length > 0 && (
             <div class="research-list">

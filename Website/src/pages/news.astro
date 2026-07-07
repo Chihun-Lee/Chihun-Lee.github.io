@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { news } from '../lib/data';
+---
+<Base title="News" active="news">
+  <section>
+    <div class="container">
+      <span class="eyebrow">News</span>
+      <h1>Group news</h1>
+      <p style="max-width: 720px;">Milestones, papers, talks, and announcements. Newest first.</p>
+
+      <ul class="news-list" style="margin-top: 24px;">
+        {news.map((n) => (
+          <li class="news-item">
+            <div class="news-date">{n.date}</div>
+            <div class="news-text">{n.text}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

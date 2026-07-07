@@ -5,7 +5,7 @@ import { profile } from '../lib/data';
 interface Props {
   title?: string;
   description?: string;
-  active?: 'home' | 'research' | 'publications' | 'talks' | 'people' | 'cv';
+  active?: 'home' | 'people' | 'research' | 'publications' | 'patents' | 'talks' | 'news' | 'cv';
 }
 
 const { title, description, active } = Astro.props;
@@ -15,10 +15,13 @@ const pageTitle = title
 const desc = description ?? profile.short_bio.trim();
 
 const nav = [
+  { id: 'home', label: 'Welcome', href: '/' },
+  { id: 'people', label: 'Members', href: '/people' },
   { id: 'research', label: 'Research', href: '/research' },
   { id: 'publications', label: 'Publications', href: '/publications' },
-  { id: 'talks', label: 'Talks & Travel', href: '/talks' },
-  { id: 'people', label: 'People', href: '/people' },
+  { id: 'patents', label: 'Patents', href: '/patents' },
+  { id: 'talks', label: 'Travels & Talks', href: '/talks' },
+  { id: 'news', label: 'News', href: '/news' },
   { id: 'cv', label: 'CV', href: '/cv' },
 ];
 ---

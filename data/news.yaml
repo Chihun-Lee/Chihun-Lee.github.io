@@ -1,5 +1,11 @@
 # Recent news — surfaces on the homepage. Keep newest at the top.
 news:
+  - date: 2026-07-07
+    text: "Poster at ICML 2026 AI4Science Workshop (Seoul): Compressing the Validation Bottleneck — An Agentic Self-Driving Lab for Scientific Discovery (with KETI)."
+
+  - date: 2026-06-15
+    text: Attended AI4X–Accelerate Conference 2026 in Singapore — self-driving-lab orchestration and agentic AI for science.
+
   - date: 2026-05-28
     text: Personal research site, CV, and LinkedIn pipeline live — single YAML source of truth.
 

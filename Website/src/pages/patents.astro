@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { patents } from '../lib/data';
+
+const sorted = [...patents].sort((a, b) => b.year - a.year);
+---
+<Base title="Patents" active="patents">
+  <section>
+    <div class="container">
+      <span class="eyebrow">Patents</span>
+      <h1>Patents</h1>
+      <p style="max-width: 720px;">Domestic and international patent filings. Newest first.</p>
+
+      {sorted.map((p) => (
+        <div class="pub">
+          <div class="pub-title">{p.title_en}</div>
+          <div class="pub-authors">{p.inventors.join(', ')}</div>
+          <div class="pub-venue">
+            {p.number} · {p.jurisdiction}{p.assignee ? ` · ${p.assignee}` : ''} · {p.year}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

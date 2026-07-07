@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Paperlogy';
+    src: url('Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #FAF7F0; font-family: 'Paperlogy', 'Helvetica Neue', Arial, sans-serif; }
+  #canvas {
+    position: relative;
+    width: 1600px;
+    height: 970px;
+    background: #FAF7F0;
+  }
+
+  /* ── hub: AI-based optimization (a, b 공통 방법론) ── */
+  .hub {
+    position: absolute; left: 50%; top: 30px; transform: translateX(-50%);
+    width: 680px; height: 136px;
+    background: #CC785C; border-radius: 20px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: #fff; box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    z-index: 3;
+  }
+  .hub .t1 { font-size: 46px; font-weight: 800; letter-spacing: -0.01em; }
+  .hub .t2 { font-size: 21px; font-weight: 500; opacity: 0.92; margin-top: 6px; }
+
+  /* ── pillar cards (a)(b) ── */
+  .pcard {
+    position: absolute; top: 226px;
+    width: 500px; height: 396px;
+    background: #fff; border: 1px solid #E8E1D5; border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .pcard img { width: 100%; height: 258px; object-fit: cover; display: block; }
+  .pcard .body { padding: 16px 20px 0; text-align: center; }
+  .ptitle {
+    display: inline-block;
+    background: #CC785C; color: #fff;
+    font-size: 27px; font-weight: 700;
+    padding: 12px 30px; border-radius: 999px;
+    margin-top: -46px; position: relative; z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    white-space: nowrap;
+  }
+  .pkeys { font-size: 21px; font-weight: 500; color: #6E6963; margin-top: 16px; }
+  .fig-label {
+    position: absolute; top: 14px; left: 16px;
+    background: rgba(42,42,42,0.72); color: #fff;
+    font-size: 19px; font-weight: 700;
+    width: 38px; height: 38px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2;
+  }
+
+  /* ── SDL band (c): AI Agent가 직접 루프를 운전 ── */
+  .band {
+    position: absolute; left: 40px; right: 40px; top: 662px; height: 278px;
+    background: #fff; border: 1px solid #E8E1D5; border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  }
+  .band-head { text-align: center; }
+  .band-head .ptitle { margin-top: -26px; }
+  .loop-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0; margin-top: 18px; padding: 0 30px;
+  }
+  .agent {
+    flex: 0 0 auto;
+    width: 208px; height: 148px;
+    background: #CC785C; border-radius: 16px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-top: -8px;
+  }
+  .agent .t1 { font-size: 34px; font-weight: 800; }
+  .agent .t2 { font-size: 16px; font-weight: 500; opacity: 0.9; margin-top: 4px; }
+  .station { display: flex; flex-direction: column; align-items: center; width: 182px; flex: 0 0 auto; }
+  .sphoto {
+    width: 182px; height: 136px;
+    background: #FAF7F0; border: 1px solid #E8E1D5; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .sphoto img { max-width: 90%; max-height: 86%; object-fit: contain; }
+  .slabel {
+    margin-top: -15px; z-index: 2;
+    background: #5C6B7A; color: #fff;
+    font-size: 19px; font-weight: 700;
+    padding: 7px 18px; border-radius: 999px; white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+  }
+  .sarrow { flex: 0 0 auto; width: 40px; display: flex; justify-content: center; margin-top: -14px; }
+
+  /* connectors */
+  svg.wire { position: absolute; left: 0; top: 0; pointer-events: none; z-index: 1; }
+  .wire-lbl {
+    position: absolute; font-size: 20px; font-weight: 700; color: #5C6B7A;
+    background: #FAF7F0; padding: 0 10px; z-index: 2;
+  }
+</style>
+</head>
+<body>
+<div id="canvas">
+
+  <div class="hub">
+    <div class="t1">AI-Based Optimization</div>
+    <div class="t2">surrogates · Bayesian optimization · inverse design</div>
+  </div>
+
+  <!-- (a) nanophotonics -->
+  <div class="pcard" style="left: 40px;">
+    <div class="fig-label">a</div>
+    <img src="nano.png" />
+    <div class="body">
+      <div class="ptitle">Nanophotonics</div>
+      <div class="pkeys">metasurface · metalens inverse design</div>
+    </div>
+  </div>
+
+  <!-- (b) manufacturing -->
+  <div class="pcard" style="right: 40px;">
+    <div class="fig-label">b</div>
+    <img src="manu.png" />
+    <div class="body">
+      <div class="ptitle">Manufacturing</div>
+      <div class="pkeys">injection molding · coil placement</div>
+    </div>
+  </div>
+
+  <!-- (c) metal alloy SDL: agent-driven closed loop -->
+  <div class="band">
+    <div class="fig-label" style="top: 16px;">c</div>
+    <div class="band-head"><div class="ptitle">Metal Alloy Discovery — Self-Driving Lab</div></div>
+
+    <div class="loop-row">
+      <div class="agent">
+        <div class="t1">AI Agent</div>
+        <div class="t2">plans every experiment</div>
+      </div>
+      <div class="sarrow"><svg width="34" height="14"><line x1="0" y1="7" x2="22" y2="7" stroke="#5C6B7A" stroke-width="2.5"/><polygon points="22,1 33,7 22,13" fill="#5C6B7A"/></svg></div>
+      <div class="station">
+        <div class="sphoto"><img src="powders.png" /></div>
+        <div class="slabel">Raw powders</div>
+      </div>
+      <div class="sarrow"><svg width="34" height="14"><line x1="0" y1="7" x2="22" y2="7" stroke="#5C6B7A" stroke-width="2.5"/><polygon points="22,1 33,7 22,13" fill="#5C6B7A"/></svg></div>
+      <div class="station">
+        <div class="sphoto"><img src="ded.png" /></div>
+        <div class="slabel">DED printing</div>
+      </div>
+      <div class="sarrow"><svg width="34" height="14"><line x1="0" y1="7" x2="22" y2="7" stroke="#5C6B7A" stroke-width="2.5"/><polygon points="22,1 33,7 22,13" fill="#5C6B7A"/></svg></div>
+      <div class="station">
+        <div class="sphoto"><img src="furnace.png" /></div>
+        <div class="slabel">Heat treatment</div>
+      </div>
+      <div class="sarrow"><svg width="34" height="14"><line x1="0" y1="7" x2="22" y2="7" stroke="#5C6B7A" stroke-width="2.5"/><polygon points="22,1 33,7 22,13" fill="#5C6B7A"/></svg></div>
+      <div class="station">
+        <div class="sphoto"><img src="tensile.png" /></div>
+        <div class="slabel">Tensile test</div>
+      </div>
+      <div class="sarrow"><svg width="34" height="14"><line x1="0" y1="7" x2="22" y2="7" stroke="#5C6B7A" stroke-width="2.5"/><polygon points="22,1 33,7 22,13" fill="#5C6B7A"/></svg></div>
+      <div class="station">
+        <div class="sphoto" style="gap:5px;"><img src="sem.png" style="max-width:42%;" /><img src="xrd.png" style="max-width:50%;" /></div>
+        <div class="slabel">SEM · XRD</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- connectors -->
+  <svg class="wire" width="1600" height="970">
+    <!-- hub -> (a) -->
+    <path d="M 460 98 L 290 98 L 290 218" fill="none" stroke="#CC785C" stroke-width="3"/>
+    <polygon points="283,218 290,231 297,218" fill="#CC785C"/>
+    <!-- hub -> (b) -->
+    <path d="M 1140 98 L 1310 98 L 1310 218" fill="none" stroke="#CC785C" stroke-width="3"/>
+    <polygon points="1303,218 1310,231 1317,218" fill="#CC785C"/>
+    <!-- (c) data return: last station -> under row -> agent -->
+    <path d="M 1466 872 L 1466 906 L 178 906 L 178 884"
+          fill="none" stroke="#5C6B7A" stroke-width="2.5" stroke-dasharray="8 7"/>
+    <polygon points="171,886 178,874 185,886" fill="#5C6B7A"/>
+  </svg>
+  <div class="wire-lbl" style="left: 730px; top: 894px; background: #fff;">data</div>
+
+</div>
+</body>
+</html>

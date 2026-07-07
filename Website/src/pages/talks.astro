@@ -17,10 +17,10 @@ const roleIcon: Record<string, string> = {
   keynote: 'Keynote',
 };
 ---
-<Base title="Talks & Travel" active="talks">
+<Base title="Travels & Talks" active="talks">
   <section>
     <div class="container">
-      <span class="eyebrow">Talks & travel</span>
+      <span class="eyebrow">Travels & talks</span>
       <h1>Talks</h1>
       <p style="max-width: 720px;">Conference presentations and invited talks. Newest first.</p>
 
@@ -54,16 +54,17 @@ const roleIcon: Record<string, string> = {
 
       {travel && travel.length > 0 && (
         <div style="margin-top: 56px;">
-          <h2>Travel</h2>
-          <ul>
-            {travel.map((tr: any) => (
-              <li>
-                <strong style="color: var(--ink-primary);">{tr.city}, {tr.country}</strong>
-                {' — '}{tr.purpose}
-                <span class="muted"> ({tr.start} – {tr.end})</span>
-              </li>
-            ))}
-          </ul>
+          <h2>Travels</h2>
+          <p style="max-width: 720px;">Conference and research travel. Newest first.</p>
+          {travel.map((tr: any) => (
+            <div class="talk">
+              <div class="talk-date">{tr.start}{tr.end && tr.end !== tr.start ? ` – ${tr.end}` : ''}</div>
+              <div>
+                <div class="talk-title">{tr.city}, {tr.country}</div>
+                <div class="talk-meta">{tr.purpose}</div>
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </div>
