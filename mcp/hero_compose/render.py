@@ -12,11 +12,11 @@ import pathlib
 from playwright.sync_api import sync_playwright
 
 HERE = pathlib.Path(__file__).resolve().parent
-OUT = HERE.parent.parent / "Website" / "public" / "assets" / "sdl-hero.png"
+OUT = HERE.parent.parent / "Website" / "public" / "assets" / "sdl-hero-v2.png"
 
 with sync_playwright() as p:
     b = p.chromium.launch()
-    pg = b.new_page(viewport={"width": 1660, "height": 950}, device_scale_factor=2)
+    pg = b.new_page(viewport={"width": 1660, "height": 950}, device_scale_factor=1.5)
     pg.goto(f"file://{HERE}/compose_hero.html")
     pg.wait_for_timeout(500)
     pg.locator("#canvas").screenshot(path=str(OUT))

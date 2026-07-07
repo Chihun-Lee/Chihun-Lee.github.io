@@ -109,6 +109,12 @@ travel:
     start: 2026-07-07
     end: 2026-07-11
 
+  - city: Changwon
+    country: Republic of Korea
+    purpose: Lab supplies purchase (city trip)
+    start: 2026-06-23
+    end: 2026-06-23
+
   - city: Singapore
     country: Singapore
     purpose: AI4X–Accelerate Conference 2026 (incl. self-driving-lab tutorials)
@@ -120,6 +126,12 @@ travel:
     purpose: AMDS 2026 organizing committee meeting
     start: 2026-06-08
     end: 2026-06-08
+
+  - city: Seoul
+    country: Republic of Korea
+    purpose: Data analysis & data-collection planning meeting
+    start: 2026-06-04
+    end: 2026-06-04
 
   - city: Seoul
     country: Republic of Korea
@@ -135,15 +147,39 @@ travel:
 
   - city: Jeju
     country: Republic of Korea
-    purpose: Korean Institute of Metals and Materials (KIM) Spring Meeting 2026
+    purpose: Korean Institute of Metals and Materials (KIM) Spring Meeting 2026 & multimodal-data meeting
     start: 2026-04-27
     end: 2026-04-30
+
+  - city: Seoul
+    country: Republic of Korea
+    purpose: Project kick-off meeting
+    start: 2026-04-21
+    end: 2026-04-21
+
+  - city: Busan
+    country: Republic of Korea
+    purpose: Virtual-engineering enterprise AX support meeting
+    start: 2026-04-17
+    end: 2026-04-17
 
   - city: Seoul
     country: Republic of Korea
     purpose: AI Winter Short Course Program 2026
     start: 2026-02-25
     end: 2026-02-27
+
+  - city: Gimhae
+    country: Republic of Korea
+    purpose: Enterprise AX support meeting
+    start: 2026-01-28
+    end: 2026-01-28
+
+  - city: Daegu
+    country: Republic of Korea
+    purpose: Project meeting & equipment review
+    start: 2026-01-13
+    end: 2026-01-13
 
   - city: Changwon
     country: Republic of Korea
