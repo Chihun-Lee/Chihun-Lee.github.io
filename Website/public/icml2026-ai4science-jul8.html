@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ICML 2026 AI for Science talks and natural-science posters scheduled for Jul 8 (KST).">
+<title>ICML 2026 · AI for Science — Today (Jul 8)</title>
+<style>
+:root{
+  --bg:#f4f5f2; --panel:#ffffff; --ink:#1a1e26; --muted:#5c6472;
+  --line:#dfe2dc; --accent:#0f7d6e; --accent-soft:#e0efeb;
+  --spot:#b4531a; --spot-soft:#f6e7dc; --num:#8b93a1;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#12151a;--panel:#191d24;--ink:#e8ebe6;--muted:#9aa2b0;
+    --line:#2a2f38;--accent:#4fd0bd;--accent-soft:#12332f;
+    --spot:#e6975a;--spot-soft:#3a2415;--num:#6b7482;}
+}
+:root[data-theme="dark"]{--bg:#12151a;--panel:#191d24;--ink:#e8ebe6;--muted:#9aa2b0;
+  --line:#2a2f38;--accent:#4fd0bd;--accent-soft:#12332f;--spot:#e6975a;--spot-soft:#3a2415;--num:#6b7482;}
+:root[data-theme="light"]{--bg:#f4f5f2;--panel:#ffffff;--ink:#1a1e26;--muted:#5c6472;
+  --line:#dfe2dc;--accent:#0f7d6e;--accent-soft:#e0efeb;--spot:#b4531a;--spot-soft:#f6e7dc;--num:#8b93a1;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px}
+header{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,6vw,46px);line-height:1.05;
+  margin:0;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);margin:14px 0 0;font-size:15px;max-width:60ch}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin:24px 0 0;padding:16px 0;border-top:1px solid var(--line)}
+.stat{display:flex;flex-direction:column}
+.stat b{font-family:var(--mono);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+h2{font-family:var(--serif);font-size:24px;font-weight:600;margin:52px 0 4px;letter-spacing:-.01em}
+.lead{color:var(--muted);font-size:14px;margin:0 0 22px}
+.sess{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:0 0 16px}
+.sess-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;
+  padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
+.sess-name{font-weight:600;font-size:15px}
+.sess-meta{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.talk{padding:9px 0;border-bottom:1px dotted var(--line)}
+.talk:last-child{border-bottom:none}
+.t-title{font-weight:500;font-size:15px}
+.t-auth{color:var(--muted);font-size:13px;margin-top:3px}
+.psess{margin:0 0 30px}
+.psess h3{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font-size:16px;font-weight:600;
+  margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--accent)}
+.pcount{font-family:var(--mono);font-size:12px;background:var(--accent-soft);color:var(--accent);
+  padding:2px 8px;border-radius:20px}
+.ptime{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.plist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.plist li{display:flex;gap:14px;padding:10px 6px;border-radius:6px}
+.plist li:nth-child(odd){background:var(--panel)}
+.pnum{font-family:var(--mono);font-size:12px;color:var(--num);min-width:52px;padding-top:2px;
+  font-variant-numeric:tabular-nums}
+.pbody{display:flex;flex-direction:column;gap:2px}
+.ptitle{font-size:14.5px;font-weight:500;line-height:1.35}
+.pauth{font-size:12.5px;color:var(--muted)}
+.spot{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;
+  background:var(--spot-soft);color:var(--spot);padding:1px 6px;border-radius:4px;vertical-align:middle;margin-left:4px}
+footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--muted);font-family:var(--mono)}
+footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">ICML 2026 · Seoul, COEX · Wed Jul 8</p>
+  <h1>AI for Science — on the program today</h1>
+  <p class="sub">Main-conference AI&nbsp;for&nbsp;Science talks and natural-science posters (Chemistry · Physics · Earth Sciences) scheduled for today. Times in KST. The dedicated AI&nbsp;for&nbsp;Science <em>workshop</em> is separate — Sat Jul 11, Hall&nbsp;C.</p>
+  <div class="stats">
+    <div class="stat"><b>4</b><span>Oral talks</span></div>
+    <div class="stat"><b>87</b><span>Science posters</span></div>
+    <div class="stat"><b>3</b><span>Poster sessions</span></div>
+  </div>
+</header>
+
+<h2>Oral session</h2>
+<p class="lead">The AI-for-Science oral track running today.</p>
+<div class="sess"><div class="sess-head"><span class="sess-name">Oral 4E AI for Science: Dynamical Systems and Processes</span><span class="sess-meta">Jul 08, 16:00 KST · GRAND BALLROOM 101-105</span></div>
+<div class="talk"><div class="t-title">CoEvol-NO: State and Coordinate Co-Evolution with an Error-Driven Predictor-Corrector Paradigm for Neural Operator Transformer</div><div class="t-auth">Jianqiao Zeng, Ruocheng Wang, Yanzhi Liu, Hao Xiong, Junchi Yan</div></div>
+<div class="talk"><div class="t-title">Geometric Flow Grounding: A Unified Manifold Decoupling Framework for Dynamics Discovery and Verification</div><div class="t-auth">Chang Yu, Yuxuan Luo, Yixuan Du, Yuqing Zhou, Siyuan Li, Jingbo Zhou, jiawei jiang, Zhen Lei, +1 more</div></div>
+<div class="talk"><div class="t-title">Solving Time-Dependent Differential Equations with Physical Dynamical Systems</div><div class="t-auth">Chuan Liu, Yijie Chen, Ruibing Song, Wenhao Huang, Chunshu Wu, Deqian Kong, Ying Nian Wu, Kaiyuan Yang, +2 more</div></div>
+<div class="talk"><div class="t-title">Training-Free Bayesian Filtering with Generative Emulators</div><div class="t-auth">Thomas Savary, François Rozet, Gilles Louppe</div></div>
+</div>
+
+<h2>Posters — Chemistry, Physics &amp; Earth Sciences</h2>
+<p class="lead">All natural-science-application posters on today's floor, grouped by session and ordered by board number. Spotlights flagged.</p>
+<div class="psess"><h3>Poster Session 3 <span class="pcount">62</span><span class="ptime">Jul 08, 10:30–12:15 KST · HALL A</span></h3><ol class="plist">
+<li><span class="pnum">#1103</span><span class="pbody"><span class="ptitle">When Single Answer Is Not Enough: Rethinking Single-Step Retrosynthesis Benchmarks for LLMs</span><span class="pauth">Bogdan Zagribelnyy, Ivan Ilin, Maksim Kuznetsov, Nikita Bondarev, Roman Schutski, Thomas MacDougall, +6 more</span></span></li>
+<li><span class="pnum">#1104</span><span class="pbody"><span class="ptitle">When Does Adaptation Win? Scaling Laws for Meta-Learning in Quantum Control</span><span class="pauth">Nima Leclerc, Chris Miller, Nicholas Brawand</span></span></li>
+<li><span class="pnum">#1105</span><span class="pbody"><span class="ptitle">Walrus: A Cross-domain Foundation Model for Continuum Dynamics <span class="spot">spotlight</span></span><span class="pauth">Michael McCabe, Payel Mukhopadhyay, Tanya Marwah, Bruno Régaldo-Saint Blancard, François Rozet, Cristiana Diaconu, +19 more</span></span></li>
+<li><span class="pnum">#1106</span><span class="pbody"><span class="ptitle">WFR-MFM: One-Step Inference for Dynamic Unbalanced OT</span><span class="pauth">Xinyu Wang, Ruoyu Wang, Qiangwei Peng, Peijie Zhou, Tiejun Li</span></span></li>
+<li><span class="pnum">#1107</span><span class="pbody"><span class="ptitle">Unlocking Zero-Shot Geospatial Reasoning via Indirect Rewards</span><span class="pauth">Chenhui Xu, Fuxun Yu, Michael Bianco, Jacob Kovarskiy, Raphael Tang, Qi Zhang, +12 more</span></span></li>
+<li><span class="pnum">#1108</span><span class="pbody"><span class="ptitle">UniDrag: Unified Multi-Field Prediction and Robust Shape Optimization for Vehicle Aerodynamics</span><span class="pauth">Ye Liu, Shouyi Liu, Ding Wang, Huiyu Yang, Ruizhe DENG, Qian Li, +6 more</span></span></li>
+<li><span class="pnum">#1109</span><span class="pbody"><span class="ptitle">Unbiased and Second-Order-Free Training for High-Dimensional PDEs</span><span class="pauth">Jaemin Seo, Su Rin Lee, JaeYong Lee</span></span></li>
+<li><span class="pnum">#1110</span><span class="pbody"><span class="ptitle">U-Cast: A Surprisingly Simple Frontier Probabilistic AI Weather Forecaster</span><span class="pauth">Salva Ruhling Cachay, Duncan Watson-Parris, Rose Yu</span></span></li>
+<li><span class="pnum">#1111</span><span class="pbody"><span class="ptitle">Two-Parameter Flows for Learning Population Dynamics of Physical Systems</span><span class="pauth">Paul Schwerdtner, Tobias Blickhan, Benjamin Peherstorfer</span></span></li>
+<li><span class="pnum">#1112</span><span class="pbody"><span class="ptitle">Training Diffusion Language Models for Black-Box Optimization <span class="spot">spotlight</span></span><span class="pauth">Zipeng Sun, Can Chen, Ye Yuan, Haolun Wu, Jiayao Gu, Christopher Pal, +1 more</span></span></li>
+<li><span class="pnum">#1113</span><span class="pbody"><span class="ptitle">Towards Sub-second Biological Foundation Model Infrastructure: A Quantized Consistency Diffusion Framework for Molecular Docking <span class="spot">spotlight</span></span><span class="pauth">Kexin Zhang, Weichen Qin, Yue Teng, Jiale Yu, Yuanyuan Ma, jinyu lin, +3 more</span></span></li>
+<li><span class="pnum">#1114</span><span class="pbody"><span class="ptitle">Topology-Preserving Neural Operator Learning via Hodge Decomposition</span><span class="pauth">Dongzhe Zheng, Tao Zhong, Christine Allen-Blanchette</span></span></li>
+<li><span class="pnum">#1115</span><span class="pbody"><span class="ptitle">Target-Aware Bandit Allocation for Scalable Surrogate Optimization in Chemical Space</span><span class="pauth">Mohammad Haddadnia, Yuvan Chali, Abhilash Jayaraj, Constance Kraay, Joana Reis, Felix Strieth-Kalthoff, +1 more</span></span></li>
+<li><span class="pnum">#1200</span><span class="pbody"><span class="ptitle">MeshTok: Efficient Multi-Scale Tokenization for Scalable PDE Transformers</span><span class="pauth">Zhao Yanshun, Xiaoyu Peng, Congcong Zhu, Jiamin Jiang, Jingrun Chen</span></span></li>
+<li><span class="pnum">#1201</span><span class="pbody"><span class="ptitle">Mitigating Gradient Pathology in PINNs through Aligned Constraint</span><span class="pauth">Yichen Luo, Peiyu Zhu, Dongxiao Hu, Jia Wang, Tailin Wu, Dapeng Lan, +2 more</span></span></li>
+<li><span class="pnum">#1202</span><span class="pbody"><span class="ptitle">Neuro-Symbolic AI for Analytical Solutions of Differential Equations</span><span class="pauth">Orestis Oikonomou, Levi Lingsch, Dana Grund, Siddhartha Mishra, Georgios Kissas</span></span></li>
+<li><span class="pnum">#1203</span><span class="pbody"><span class="ptitle">PINNfluence: Interpreting PINNs through Influence Functions</span><span class="pauth">Aleksander Krasowski, Jonas Naujoks, Moritz Weckbecker, Galip Yolcu, Thomas Wiegand, Sebastian Lapuschkin, +2 more</span></span></li>
+<li><span class="pnum">#1204</span><span class="pbody"><span class="ptitle">PLaID++: A Preference Aligned Language Model for Targeted Inorganic Materials Design</span><span class="pauth">Andy Xu, Rohan Desai, Larry Wang, Ethan Ritz, Gabriel Hope</span></span></li>
+<li><span class="pnum">#1205</span><span class="pbody"><span class="ptitle">Position: LLM for Physics Research Requires Domain-Specialized Training and Tooling</span><span class="pauth">Sirui Lu, Zhijing Jin, Terry Zhang, Pavel Kos, Juan Cirac, Bernhard Schölkopf</span></span></li>
+<li><span class="pnum">#1206</span><span class="pbody"><span class="ptitle">Position: Significant impact of numerical precision in scientific machine learning</span><span class="pauth">Youngwoo Cho, Jaekak Yoo, Soyoung Yang, Dong-Joon Yi, Seung Lee, Mun Jeong, +1 more</span></span></li>
+<li><span class="pnum">#1207</span><span class="pbody"><span class="ptitle">Proximal Splitting Methods for Hybrid Differentiable Models</span><span class="pauth">Abdel-Rahim Mezidi, Jordan Patracone, Amaury Habrard</span></span></li>
+<li><span class="pnum">#1208</span><span class="pbody"><span class="ptitle">RESIDUAL-GUIDED MULTI-RESOLUTION REFINEMENT OF FOUNDATION MODELS - A CASE STUDY IN DROUGHT FORECASTING</span><span class="pauth">Wentao Gao, Jiuyong Li, Lin Liu, Thuc Le, Jixue Liu, Yanchang Zhao, +1 more</span></span></li>
+<li><span class="pnum">#1209</span><span class="pbody"><span class="ptitle">SENDAI: A Hierarchical Sparse-measurement, EfficieNt Data AssImilation Framework</span><span class="pauth">Xingyue Zhang, Yuxuan Bao, Mars Liyao Gao, J. Nathan Kutz</span></span></li>
+<li><span class="pnum">#1210</span><span class="pbody"><span class="ptitle">STFlow: Data-Coupled Flow Matching for Geometric Trajectory Simulation</span><span class="pauth">Kiet Bennema ten Brinke, Koen Minartz, Vlado Menkovski</span></span></li>
+<li><span class="pnum">#1211</span><span class="pbody"><span class="ptitle">Scaling Laws of Global Weather Models</span><span class="pauth">Yuejiang Yu, Langwen Huang, Alexandru Calotoiu, Torsten Hoefler</span></span></li>
+<li><span class="pnum">#1212</span><span class="pbody"><span class="ptitle">SeisMark: A Large-Scale Open Benchmark for Robust 3D Seismic Fault Detection</span><span class="pauth">Minjun Park, Joseph Stitt, Robert Clapp, Ilan Naiman, Artem Goncharuk, Kevin Smith</span></span></li>
+<li><span class="pnum">#1213</span><span class="pbody"><span class="ptitle">Semi-Supervised Neural Super-Resolution for Mesh-Based Simulations</span><span class="pauth">Jiyeon Kim, Youngjoon Hong, Won-Yong Shin</span></span></li>
+<li><span class="pnum">#1214</span><span class="pbody"><span class="ptitle">SimulCost: A Cost-Aware Benchmark and Toolkit for Automating Physics Simulations with LLMs</span><span class="pauth">Yadi Cao, Sicheng Lai, Jiahe Huang, Yang Zhang, Zach Lawrence, Rohan Bhakta, +9 more</span></span></li>
+<li><span class="pnum">#1215</span><span class="pbody"><span class="ptitle">StormInsight: Hierarchical Environmental Forcing and Vertical Coupling for Weather System Evolution</span><span class="pauth">Jun Chen, Yan Fang, Minghui Qiu, Yueran Qiu, Lin CHEN, Shuxin Zhong, +2 more</span></span></li>
+<li><span class="pnum">#1300</span><span class="pbody"><span class="ptitle">MOD-SR: Unifying Multimodal Learning and Direct Optimization with Gradient-Guided Diffusion Model for Symbolic Regression</span><span class="pauth">Chuyang Xiang, Yichen Wei, Junchi Yan</span></span></li>
+<li><span class="pnum">#1301</span><span class="pbody"><span class="ptitle">MMClima: A Framework for Multimodal Climate Science Data and Evaluation</span><span class="pauth">Muhammad Umer Sheikh, Hassan Abid, Khawar shehzad, Ufaq Khan, Muhammad Haris Khan</span></span></li>
+<li><span class="pnum">#1302</span><span class="pbody"><span class="ptitle">MADE: Benchmark Environments for Closed-Loop Materials Discovery</span><span class="pauth">Shreshth Malik, Tiarnan Doherty, Panagiotis Tigas, Muhammed Razzak, Stephen Roberts, Aron Walsh, +1 more</span></span></li>
+<li><span class="pnum">#1303</span><span class="pbody"><span class="ptitle">Learning to Think in Physics: Breaking Shortcut Learning in Scientific Diffusion via Representation Alignment</span><span class="pauth">Haozhe Jia, Pengyu Yin, Wenshuo Chen, Shaofeng Liang, Lei Wang, Bowen Tian, +3 more</span></span></li>
+<li><span class="pnum">#1304</span><span class="pbody"><span class="ptitle">Learning to Emulate Chaos: Adversarial Optimal Transport Regularization</span><span class="pauth">Gabriel Melo, Leonardo Santiago, Peter Y. Lu</span></span></li>
+<li><span class="pnum">#1305</span><span class="pbody"><span class="ptitle">Learning Permutation-invariant Macroscopic Dynamics</span><span class="pauth">Zhichao Han, Mengyi Chen, Qianxiao Li</span></span></li>
+<li><span class="pnum">#1306</span><span class="pbody"><span class="ptitle">Learning Hamiltonian Flow Maps: Mean Flow Consistency for Large-Timestep Molecular Dynamics <span class="spot">spotlight</span></span><span class="pauth">Winfried Ripken, Michael Plainer, Gregor Lied, Thorben Frank, Oliver Unke, Stefan Chmiela, +2 more</span></span></li>
+<li><span class="pnum">#1307</span><span class="pbody"><span class="ptitle">LangPrecip: Language-Aware Multimodal Precipitation Nowcasting</span><span class="pauth">Xudong Ling, Lichaorong, Huang Tianxi, Qian Dong, Guiduo Duan</span></span></li>
+<li><span class="pnum">#1308</span><span class="pbody"><span class="ptitle">LABO: LLM-Accelerated Bayesian Optimization through Broad Exploration and Selective Experimentation</span><span class="pauth">Zhuo Chen, Xinzhe Yuan, Jianshu Zhang, Jinzong Dong, Ruichen Zhou, Yingchun Niu, +5 more</span></span></li>
+<li><span class="pnum">#1309</span><span class="pbody"><span class="ptitle">Interpretability and Generalization Bounds for Learning Spatial Physics</span><span class="pauth">Alejandro Queiruga, Theo Gutman-Solo, Shuai Jiang</span></span></li>
+<li><span class="pnum">#1310</span><span class="pbody"><span class="ptitle">Identifiable Smooth Conjugacy Learning via Adversarial Orthogonality</span><span class="pauth">In Huh, Changwook Jeong, Muhammad Alam</span></span></li>
+<li><span class="pnum">#1311</span><span class="pbody"><span class="ptitle">Geometry-Aware Neural Optimizer for Shape Optimization and Inversion</span><span class="pauth">Guoze Sun, Tianya Miao, Haoyang Huang, Huaguan Chen, Han Wan, Rui Zhang, +1 more</span></span></li>
+<li><span class="pnum">#1312</span><span class="pbody"><span class="ptitle">Generative Adaptation of Dynamics to Environmental Shifts via Weight-space Diffusion</span><span class="pauth">Ruikun Li, Huandong Wang, Jingtao Ding, Yuan Yuan, Qingmin Liao, Yong Li</span></span></li>
+<li><span class="pnum">#1313</span><span class="pbody"><span class="ptitle">From Feasible to Practical: Pareto-Optimal Synthesis Planning <span class="spot">spotlight</span></span><span class="pauth">Friedrich Hastedt, Dongda Zhang, Antonio Del rio chanona</span></span></li>
+<li><span class="pnum">#1314</span><span class="pbody"><span class="ptitle">FluxNet: Learning Capacity-Constrained Local Transport Operators for Conservative and Bounded PDE Surrogates</span><span class="pauth">Zishuo Lan, Junjie Li, Lei Wang, Jincheng Wang</span></span></li>
+<li><span class="pnum">#1315</span><span class="pbody"><span class="ptitle">FUSE: FK-Steered Multi-Modal Flow Matching for Efficient Simulation-Based Posterior Estimation</span><span class="pauth">Weichen Qin, Yufan Xie, Peihao Wang, Chia-Jui Chou, Minghui Du, Peng Xu, +5 more</span></span></li>
+<li><span class="pnum">#1400</span><span class="pbody"><span class="ptitle">A Cartesian-3j and nj Framework for Machine Learning Interatomic Potentials</span><span class="pauth">Zemin Xu, Chenyu Wu, Wenbo Xie, Peijun Hu</span></span></li>
+<li><span class="pnum">#1401</span><span class="pbody"><span class="ptitle">A Dirac-Frenkel-Onsager principle: Instantaneous residual minimization with gauge momentum for nonlinear parametrizations of PDE solutions <span class="spot">spotlight</span></span><span class="pauth">Matteo Raviola, Benjamin Peherstorfer</span></span></li>
+<li><span class="pnum">#1402</span><span class="pbody"><span class="ptitle">A Geometric Lens on Physics-Aligned Data Compression</span><span class="pauth">Aleix Segui, Wesley Armour</span></span></li>
+<li><span class="pnum">#1403</span><span class="pbody"><span class="ptitle">AutoMat: Physics-Guided Agentic Reasoning for Solving Ill-Posed Inverse Microscopy Problems</span><span class="pauth">Yaotian Yang, Yiwen Tang, Yizhe Chen, Xiao Chen, Jiangjie Qiu, Hao Xiong, +11 more</span></span></li>
+<li><span class="pnum">#1404</span><span class="pbody"><span class="ptitle">Autoregressive Boltzmann Generators <span class="spot">spotlight</span></span><span class="pauth">Danyal Rehman, Charlie Tan, Yoshua Bengio, Joey Bose, Alexander Tong</span></span></li>
+<li><span class="pnum">#1405</span><span class="pbody"><span class="ptitle">Beyond Continuity: Simulation-free Reconstruction of Discrete Branching Dynamics from Single-cell Snapshots</span><span class="pauth">Junda Ying, Yuxuan Wang, Bowen Yang, Peijie Zhou, Lei Zhang</span></span></li>
+<li><span class="pnum">#1406</span><span class="pbody"><span class="ptitle">BioDynaSpec: Harmonic-Guided Spatio-Spectral Autoregressive Diffusion for Protein Dynamics Generation</span><span class="pauth">Mujie Lin, Yutian Liu, Yudi Guo, Yanzhen Hou, Yiheng Tao, Ruochong Zheng, +4 more</span></span></li>
+<li><span class="pnum">#1407</span><span class="pbody"><span class="ptitle">CARD: Coarse-to-fine Autoregressive Modeling with Radix-based Decomposition for Transferable Free Energy Estimation</span><span class="pauth">Ziyang Yu, Yi He, Wenbing Huang, Wen Yan, Yang Liu</span></span></li>
+<li><span class="pnum">#1408</span><span class="pbody"><span class="ptitle">ClimateAR: Multi-Scale Autoregressive Generative Modeling for Seasonal-to-Interannual Climate Forecasting</span><span class="pauth">Yue Yu, Weiqi Chen, Binqing Wu, Dongliang Cui, Wanyi Jiang, Zongjiang Shang, +3 more</span></span></li>
+<li><span class="pnum">#1409</span><span class="pbody"><span class="ptitle">CocoRNA: Collective RNA Design with Cooperative Multi-agent Reinforcement Learning</span><span class="pauth">Tianmeng Hu, Biao Luo, Ke Li</span></span></li>
+<li><span class="pnum">#1410</span><span class="pbody"><span class="ptitle">Contrastive Geometric Learning Unlocks Unified Structure- and Ligand-Based Drug Design</span><span class="pauth">Lisa Schneckenreiter, Sohvi Luukkonen, Lukas Friedrich, Daniel Kuhn, Günter Klambauer</span></span></li>
+<li><span class="pnum">#1411</span><span class="pbody"><span class="ptitle">Deliberate Evolution for Sample-Efficient Symbolic Regression with LLM</span><span class="pauth">Xinyu Pang, (Andrew) Zhanke Zhou, Xuan Li, Fangrui Lv, Shanshan Wei, Sen Cui, +2 more</span></span></li>
+<li><span class="pnum">#1412</span><span class="pbody"><span class="ptitle">Derivative Informed Learning of Exchange-Correlation Functionals</span><span class="pauth">Eike S. Eberhard, Luca Anthony Thiede, Abdulrahman Aldossary, Andreas Burger, Nicholas Gao, Vignesh Bhethanabotla, +2 more</span></span></li>
+<li><span class="pnum">#1413</span><span class="pbody"><span class="ptitle">Di-BiLPS: Denoising induced Bidirectional Latent-PDE-Solver under Sparse Observations</span><span class="pauth">Zhonghao Li, Chaoyu Liu, Qian Zhang</span></span></li>
+<li><span class="pnum">#1414</span><span class="pbody"><span class="ptitle">EqGINO: Equivariant Geometry-Informed Fourier Neural Operators for 3D Partial Differential Equations</span><span class="pauth">Sungwon Kim, Juho Song, Seungmin Shin, Guimok Cho, Sangkook Kim, Chanyoung Park</span></span></li>
+<li><span class="pnum">#1416</span><span class="pbody"><span class="ptitle">FRIGID: Scaling Diffusion-Based Molecular Generation from Mass Spectra at Training and Inference Time</span><span class="pauth">Montgomery Bohde, Hongxuan Liu, Mrunali Manjrekar, Magdalena Lederbauer, Shuiwang Ji, Runzhong Wang, +1 more</span></span></li>
+<li><span class="pnum">#3508</span><span class="pbody"><span class="ptitle">Origo: Physically Interpretable Multi-Physics PDE Pre-training through Neural Operator Splitting</span><span class="pauth">Li Sun, Hongbo Lv, Zhikai Jiang, Zhongtian Sun, Lanxu Yang, Philip Yu</span></span></li>
+</ol></div>
+<div class="psess"><h3>Poster Session 4 <span class="pcount">3</span><span class="ptime">Jul 08, 14:30–16:15 KST · HALL A</span></h3><ol class="plist">
+<li><span class="pnum">#1614</span><span class="pbody"><span class="ptitle">Controllable Molecule Generation via Sparse Representation Editing: An Interpretability-Driven Perspective</span><span class="pauth">Zhuoran Li, Xu Sun, Wanyu LIN, Chang Chen</span></span></li>
+<li><span class="pnum">#1615</span><span class="pbody"><span class="ptitle">Learning-Guided Integration Contours Construction for Fast Large-Scale Generalized Eigensolvers</span><span class="pauth">Yeqiu Chen, Ziyan Liu, Hong Wang, Lei Liu</span></span></li>
+<li><span class="pnum">#1616</span><span class="pbody"><span class="ptitle">Teaching Molecular Dynamics to a Non-Autoregressive Ionic Transport Predictor</span><span class="pauth">Jiyeon Kim, Byungju Lee, Won-Yong Shin</span></span></li>
+</ol></div>
+<div class="psess"><h3>Poster Session 5 <span class="pcount">22</span><span class="ptime">Jul 08, 17:00–18:45 KST · HALL A</span></h3><ol class="plist">
+<li><span class="pnum">#1400</span><span class="pbody"><span class="ptitle">Reduction of Probabilistic Chemical Reaction Networks</span><span class="pauth">Mauricio Montes, Grégoire Sergeant-Perthuis</span></span></li>
+<li><span class="pnum">#1401</span><span class="pbody"><span class="ptitle">RetrOrchestrator: A Multi-Step Retrosynthesis Agent Dynamically Orchestrating Single-Step Transition Models</span><span class="pauth">Liao Chang, Luotian Yuan, Yiping Ke, Ying Wei</span></span></li>
+<li><span class="pnum">#1402</span><span class="pbody"><span class="ptitle">Spectral-Informed Neural Networks Outperform Spectral methods in High-dimensional PDEs <span class="spot">spotlight</span></span><span class="pauth">Tianchi Yu, Ivan Oseledets</span></span></li>
+<li><span class="pnum">#1403</span><span class="pbody"><span class="ptitle">Stochastic Lifting for Generating Trajectories of Stochastic Physical Systems</span><span class="pauth">Jules Berman, Tobias Blickhan, Benjamin Peherstorfer</span></span></li>
+<li><span class="pnum">#1404</span><span class="pbody"><span class="ptitle">Test-time Generalization for Physics through Neural Operator Splitting</span><span class="pauth">Louis Serrano, Rudy Morel, Jiequn Han, Edouard Oyallon, Shirley Ho</span></span></li>
+<li><span class="pnum">#1405</span><span class="pbody"><span class="ptitle">Training-Free Bayesian Filtering with Generative Emulators <span class="spot">spotlight</span></span><span class="pauth">Thomas Savary, François Rozet, Gilles Louppe</span></span></li>
+<li><span class="pnum">#1500</span><span class="pbody"><span class="ptitle">Physics-informed coarsening for multigrid graph neural networks surrogates</span><span class="pauth">Amir Bazzi, Ramy Nemer, Alves José, Elie Hachem</span></span></li>
+<li><span class="pnum">#1501</span><span class="pbody"><span class="ptitle">Physics-Informed Distillation of Diffusion Models for PDE-Constrained Generation</span><span class="pauth">Yi Zhang, Peng Wang, Difan Zou</span></span></li>
+<li><span class="pnum">#1502</span><span class="pbody"><span class="ptitle">Open Materials Generation with Inference-Time Reinforcement Learning</span><span class="pauth">Philipp Höllmer, Stefano Martiniani</span></span></li>
+<li><span class="pnum">#1503</span><span class="pbody"><span class="ptitle">Meta-learning Structure-Preserving Dynamics</span><span class="pauth">Cheng Jing, Uvini Mudiyanselage, Woojin Cho, Minju Jo, Anthony Gruber, Kookjin Lee</span></span></li>
+<li><span class="pnum">#1504</span><span class="pbody"><span class="ptitle">Imposing Boundary Conditions on Neural Operators via Learned Function Extensions</span><span class="pauth">Sepehr Mousavi, Siddhartha Mishra, Laura De Lorenzis</span></span></li>
+<li><span class="pnum">#1505</span><span class="pbody"><span class="ptitle">Heavy-tailed Physics-Informed Neural Networks</span><span class="pauth">Jephte Abijuru, Mayank Kumar Nagda, Phil Sidney Ostheimer, Jan Tauberschmidt, Sebastian Vollmer, Stephan Mandt, +2 more</span></span></li>
+<li><span class="pnum">#1506</span><span class="pbody"><span class="ptitle">Generative Neural Operators through Diffusion Last Layer</span><span class="pauth">Sungwon Park, Anthony Zhou, Hongjoong Kim, Amir Barati Farimani</span></span></li>
+<li><span class="pnum">#1507</span><span class="pbody"><span class="ptitle">Excited Pfaffians: Generalized Neural Wave Functions Across Structure and State <span class="spot">spotlight</span></span><span class="pauth">Nicholas Gao, Till Grutschus, Frank Noe, Stephan Günnemann</span></span></li>
+<li><span class="pnum">#1508</span><span class="pbody"><span class="ptitle">Efficient and Unbiased Sampling from Boltzmann Distributions via Variance-Tuned Diffusion Models</span><span class="pauth">Fengzhe Zhang, Laurence Midgley, Jose Miguel Hernandez-Lobato</span></span></li>
+<li><span class="pnum">#1509</span><span class="pbody"><span class="ptitle">Discovering Ordinary Differential Equations with LLM-Based Qualitative and Quantitative Evaluation</span><span class="pauth">Sum Kyun Song, Bong Gyun Shin, JaeYong Lee</span></span></li>
+<li><span class="pnum">#1510</span><span class="pbody"><span class="ptitle">Deep Coupling Learning for Solving PDEs</span><span class="pauth">Lingshi MENG, Haosen Shi, Sinno Jialin Pan</span></span></li>
+<li><span class="pnum">#1511</span><span class="pbody"><span class="ptitle">DAISI: Data Assimilation with Inverse Sampling using Stochastic Interpolants</span><span class="pauth">Martin Andrae, Erik Larsson, So Takao, Tomas Landelius, Fredrik Lindsten</span></span></li>
+<li><span class="pnum">#1512</span><span class="pbody"><span class="ptitle">Cheap2Rich: A Multi-Fidelity Framework for Data Assimilation and System Identification of Multiscale Physics - Rotating Detonation Engines</span><span class="pauth">Yuxuan Bao, Jan Zajac, Megan Powers, Venkat Raman, J. Nathan Kutz</span></span></li>
+<li><span class="pnum">#1513</span><span class="pbody"><span class="ptitle">BLIPs: Bayesian Learned Interatomic Potentials</span><span class="pauth">Dario Coscia, Pim de Haan, Max Welling</span></span></li>
+<li><span class="pnum">#1514</span><span class="pbody"><span class="ptitle">AutoMS: Multi-Agent Evolutionary Search for Cross-Physics Inverse Microstructure Design</span><span class="pauth">Zhenyuan Zhao, Yu Xing, Tianyang Xue, Lingxin Cao, Xin Yan, Lin Lu</span></span></li>
+<li><span class="pnum">#1515</span><span class="pbody"><span class="ptitle">A Call to Lagrangian Action: Learning Population Mechanics from Temporal Snapshots <span class="spot">spotlight</span></span><span class="pauth">Vincent Guan, Lazar Atanackovic, Kirill Neklyudov</span></span></li>
+</ol></div>
+
+<footer>
+  Source: ICML 2026 virtual schedule (icml.cc) · AI4Science workshop program (ai4sciencecommunity.github.io/icml26) · compiled Jul 8, 2026.
+</footer>
+</div>
+
+</body>
+</html>
