@@ -1,6 +1,6 @@
 # CV — Typst pipeline
 
-Single-source-of-truth CV that compiles from the YAML files under `/Users/chihun/Code/SNS/data/`.
+Single-source-of-truth CV that compiles from the YAML files under `/Users/chihun/Code/홍보_SNS/SNS/data/`.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ Single-source-of-truth CV that compiles from the YAML files under `/Users/chihun
 ## Build
 
 ```bash
-cd /Users/chihun/Code/SNS/CV
+cd /Users/chihun/Code/홍보_SNS/SNS/CV
 pip install pyyaml
 python3 build_cv.py            # → build/cv.pdf
 python3 build_cv.py --no-pdf   # just emit build/cv.typ

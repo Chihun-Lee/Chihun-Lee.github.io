@@ -1,13 +1,13 @@
 # chihun-cv-mcp
 
 FastMCP server that lets an AI agent (or Claude in another session) edit the
-SSOT YAML files under `/Users/chihun/Code/SNS/data/` and trigger the CV,
+SSOT YAML files under `/Users/chihun/Code/홍보_SNS/SNS/data/` and trigger the CV,
 website, and LinkedIn-post builders.
 
 ## Install
 
 ```bash
-pip install -e /Users/chihun/Code/SNS/mcp
+pip install -e /Users/chihun/Code/홍보_SNS/SNS/mcp
 ```
 
 or, if you prefer pinning explicitly without an editable install:
@@ -24,7 +24,7 @@ pip install fastmcp pyyaml 'ruamel.yaml>=0.18'
 Either run:
 
 ```bash
-claude mcp add chihun-cv-mcp -- python3 /Users/chihun/Code/SNS/mcp/server.py
+claude mcp add chihun-cv-mcp -- python3 /Users/chihun/Code/홍보_SNS/SNS/mcp/server.py
 ```
 
 …or drop this into `~/.claude.json` under `"mcpServers"`:
@@ -32,7 +32,7 @@ claude mcp add chihun-cv-mcp -- python3 /Users/chihun/Code/SNS/mcp/server.py
 ```json
 "chihun-cv-mcp": {
   "command": "python3",
-  "args": ["/Users/chihun/Code/SNS/mcp/server.py"]
+  "args": ["/Users/chihun/Code/홍보_SNS/SNS/mcp/server.py"]
 }
 ```
 

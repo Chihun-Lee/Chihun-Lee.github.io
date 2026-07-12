@@ -1,6 +1,6 @@
 # SNS — LinkedIn post drafts
 
-Tiny generator that turns every entry in the SSOT YAML (`/Users/chihun/Code/SNS/data/`)
+Tiny generator that turns every entry in the SSOT YAML (`/Users/chihun/Code/홍보_SNS/SNS/data/`)
 into a copy-paste-ready LinkedIn post draft under `posts/`.
 
 There is **no LinkedIn API integration** in v1. The flow is:
@@ -16,7 +16,7 @@ There is **no LinkedIn API integration** in v1. The flow is:
 ## Usage
 
 ```bash
-cd /Users/chihun/Code/SNS/SNS
+cd /Users/chihun/Code/홍보_SNS/SNS/SNS
 pip install --quiet pyyaml
 python3 generate_posts.py
 ```

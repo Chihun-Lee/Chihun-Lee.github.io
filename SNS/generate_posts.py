@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """LinkedIn post generator.
 
-Reads the SSOT YAML files under /Users/chihun/Code/SNS/data/ (READ ONLY) and
+Reads the SSOT YAML files under /Users/chihun/Code/홍보_SNS/SNS/data/ (READ ONLY) and
 emits one markdown draft per publication and per talk into ./posts/<id>.md.
 
 A post whose front-matter already has `status: published` is left untouched

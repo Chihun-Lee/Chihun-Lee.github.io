@@ -76,7 +76,7 @@ Register with Claude Code (`~/.claude.json`):
 "mcpServers": {
   "chihun-cv-mcp": {
     "command": "python3",
-    "args": ["/Users/chihun/Code/SNS/mcp/server.py"]
+    "args": ["/Users/chihun/Code/홍보_SNS/SNS/mcp/server.py"]
   }
 }
 ```

@@ -5,7 +5,7 @@ Deploys to **https://chihun-lee.github.io** via GitHub Pages.
 
 ## Data flow
 
-Single source of truth: `/Users/chihun/Code/SNS/data/*.yaml`.
+Single source of truth: `/Users/chihun/Code/홍보_SNS/SNS/data/*.yaml`.
 
 `src/lib/data.ts` reads those YAML files at build time and exposes typed objects to Astro pages. **Do not edit content inside `src/pages/` — edit the YAML.**
 
@@ -21,7 +21,7 @@ npm run preview
 
 ## CV PDF
 
-The CV agent writes `/Users/chihun/Code/SNS/CV/build/cv.pdf`. The deploy workflow copies it to `Website/public/cv.pdf` before `astro build`. For local dev with the PDF, manually copy:
+The CV agent writes `/Users/chihun/Code/홍보_SNS/SNS/CV/build/cv.pdf`. The deploy workflow copies it to `Website/public/cv.pdf` before `astro build`. For local dev with the PDF, manually copy:
 
 ```bash
 cp ../CV/build/cv.pdf public/cv.pdf

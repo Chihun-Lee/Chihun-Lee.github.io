@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build CV PDF from YAML SSOT.
 
-Reads /Users/chihun/Code/SNS/data/*.yaml, renders Typst, compiles to PDF.
+Reads /Users/chihun/Code/홍보_SNS/SNS/data/*.yaml, renders Typst, compiles to PDF.
 """
 from __future__ import annotations
 

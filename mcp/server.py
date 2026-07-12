@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """FastMCP server for managing the Chihun Lee CV/SNS SSOT.
 
-Tools edit the YAML files under /Users/chihun/Code/SNS/data/ and trigger
+Tools edit the YAML files under /Users/chihun/Code/홍보_SNS/SNS/data/ and trigger
 the existing CV / Website / LinkedIn-post builders. All edits use
 ``ruamel.yaml`` round-trip mode when available so formatting and comments
 are preserved; we fall back to PyYAML otherwise.
@@ -52,7 +52,7 @@ def _dump(path: Path, data: Any) -> None:
 
 # ──────────────────────────────────────────────────────────────────────────
 # Paths
-REPO = Path("/Users/chihun/Code/SNS")
+REPO = Path("/Users/chihun/Code/홍보_SNS/SNS")
 DATA = REPO / "data"
 PUBS_YAML = DATA / "publications.yaml"
 TALKS_YAML = DATA / "talks.yaml"
