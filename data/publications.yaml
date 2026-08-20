@@ -5,6 +5,17 @@
 
 publications:
   # ── First-author ───────────────────────────────────────────────
+  - id: hur2026-agentic-sdl
+    title: "Compressing the Validation Bottleneck: An Agentic Self-Driving Lab for Scientific Discovery"
+    authors: ["K. Hur*", "C. Lee*"]
+    venue: arXiv preprint arXiv:2607.04508
+    year: 2026
+    role: corresponding
+    pillar: autonomous-metal-lab
+    type: preprint
+    citations: 0
+    doi: "10.48550/arXiv.2607.04508"
+
   - id: lee2025-benchmarking
     title: Benchmarking Optimization Methods Enabling Efficient Designs for Diverse Nanophotonic Applications
     authors: ["C. Lee+", "J. Rho*"]
@@ -116,6 +127,18 @@ publications:
     citations: 18
 
   # ── Co-author ──────────────────────────────────────────────────
+  - id: seong2026-metalens-hybrid
+    title: Modal contrast engineering in ultraviolet and visible metalenses enabled by material-selective hybridization
+    authors: ["J. Seong", "Y. Jeon", "G. Han", "S. Lee", "Y. Yang", "S. Kim", "C. Lee", "J. Kim", "J. Kim", "M. Jeong", "J. Noh", "J. An", "J. Rho*"]
+    venue: Nature Communications
+    volume: "17"
+    pages: "7908"
+    year: 2026
+    role: co
+    pillar: nanophotonics
+    citations: 0
+    doi: "10.1038/s41467-026-74547-2"
+
   - id: jung2025-latent-diffusion
     title: Multi-fidelity learning-based latent diffusion model for three-dimensional inverse microstructure design of dual phase steels
     authors: ["J. Jung+", "S. Oh", "H. Kim", "J. Na", "SJ. Bae", "C. Lee", "SJ. Kim", "HW. Lee*"]

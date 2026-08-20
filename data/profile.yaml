@@ -12,7 +12,7 @@ nationality: Republic of Korea
 
 contact:
   email: chihunlee@kims.re.kr
-  office_phone: "+82-54-280-3181"
+  office_phone: "+82-55-280-3181"
   mobile: "+82-10-9497-6669"
   location: Changwon, Republic of Korea
 
@@ -24,10 +24,10 @@ links:
   website: https://chihun-lee.github.io
 
 scholar_metrics:
-  total_citations: 733
+  total_citations: 805
   h_index: 12
-  i10_index: 12
-  last_updated: 2026-05-28
+  i10_index: 13
+  last_updated: 2026-08-20
 
 short_bio: >
   Senior Researcher at the Korea Institute of Materials Science (KIMS), working at

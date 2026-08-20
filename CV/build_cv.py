@@ -37,6 +37,18 @@ def esc(s: str) -> str:
     return s
 
 
+def esc_str(s: str) -> str:
+    """Escape a string for a Typst string-literal context (header params).
+
+    Typst strings only understand \\ and \" escapes; markup escapes like
+    \/ or \@ print the backslash literally, so do NOT use esc() here.
+    """
+    if s is None:
+        return ""
+    s = str(s)
+    return s.replace("\\", "\\\\").replace('"', '\\"')
+
+
 def fmt_author(name: str) -> str:
     """Format a single author name with Typst markup.
 
@@ -289,20 +301,20 @@ def build_typst() -> str:
     talks = load_yaml(DATA / "talks.yaml")["talks"]
     patents = load_yaml(DATA / "patents.yaml")["patents"]
 
-    # Header bits
-    name = esc(profile["name"])
-    title = esc(profile["title"])
-    affiliation = esc(profile["affiliation"])
-    division = esc(profile.get("division", ""))
+    # Header bits (string-literal context — see esc_str)
+    name = esc_str(profile["name"])
+    title = esc_str(profile["title"])
+    affiliation = esc_str(profile["affiliation"])
+    division = esc_str(profile.get("division", ""))
 
     contact = profile.get("contact", {})
     contact_bits = []
     if contact.get("email"):
-        contact_bits.append(esc(contact["email"]))
+        contact_bits.append(esc_str(contact["email"]))
     if contact.get("office_phone"):
-        contact_bits.append(esc(contact["office_phone"]))
+        contact_bits.append(esc_str(contact["office_phone"]))
     if contact.get("location"):
-        contact_bits.append(esc(contact["location"]))
+        contact_bits.append(esc_str(contact["location"]))
     contact_line = " · ".join(contact_bits)
 
     links = profile.get("links", {})
@@ -316,7 +328,7 @@ def build_typst() -> str:
     ]:
         v = links.get(key)
         if v:
-            link_bits.append(f"{label}: {esc(v)}")
+            link_bits.append(f"{label}: {esc_str(v)}")
     links_line = " · ".join(link_bits)
 
     # Compose body sections in CV order
