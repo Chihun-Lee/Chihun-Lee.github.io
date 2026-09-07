@@ -11,10 +11,10 @@ Education · Experience · Publications (first / co) · Research Projects ·
 Conferences (intl / domestic) · Patents · Specializations · Active Collaborations ·
 Research Interests · Google Scholar Metrics.
 
-The Korean edition (`--lang ko`) drops every publication- and conference-derived
-section — publications, conference presentations, and the Scholar citation
-metrics — per the user's spec, and renders everything else from the *_kr fields
-in data/*.yaml.
+The Korean edition (`--lang ko`) renders headings and the education / experience /
+projects / patents / specializations content from the *_kr fields in data/*.yaml.
+Publications and conference presentations keep their English citations under
+Korean headings — the titles and venues are English to begin with.
 
 `Curriculum Vitae Chihun Lee (2025.11).docx` is the pre-2026 baseline and is
 never touched; output goes to new dated files beside it.
@@ -99,7 +99,7 @@ def para(doc_or_cell, text="", *, size=BODY_PT, bold=False, italic=False,
     pf = p.paragraph_format
     pf.space_before = Pt(0)
     pf.space_after = Pt(space_after)
-    pf.line_spacing = 1.04
+    pf.line_spacing = 1.02
     if indent:
         pf.left_indent = Pt(indent)
     if hanging:
@@ -110,7 +110,7 @@ def para(doc_or_cell, text="", *, size=BODY_PT, bold=False, italic=False,
     return p
 
 
-def rich(doc, chunks, *, size=BODY_PT, space_after=2, indent=18, hanging=18):
+def rich(doc, chunks, *, size=BODY_PT, space_after=1.2, indent=18, hanging=18):
     """chunks: list of (text, {'bold':bool,'italic':bool})."""
     p = para(doc, "", size=size, space_after=space_after, indent=indent, hanging=hanging)
     for text, fmt in chunks:
@@ -124,13 +124,13 @@ TAB_PROJECT = 96
 TAB_HISTORY = {"en": 112, "ko": 96}
 
 
-def dated(doc, prefix, chunks, width, *, size=BODY_PT, space_after=2):
+def dated(doc, prefix, chunks, width, *, size=BODY_PT, space_after=1.5):
     """'2026.01 ~ 2030.12:' <tab> body, with the body hanging-indented to `width`."""
     p = doc.add_paragraph()
     pf = p.paragraph_format
     pf.space_before = Pt(0)
     pf.space_after = Pt(space_after)
-    pf.line_spacing = 1.04
+    pf.line_spacing = 1.02
     pf.left_indent = Pt(width)
     pf.first_line_indent = Pt(-width)
     pf.tab_stops.add_tab_stop(Pt(width))
@@ -142,8 +142,15 @@ def dated(doc, prefix, chunks, width, *, size=BODY_PT, space_after=2):
 
 
 def section(doc, title):
-    p = para(doc, f"■ {title}", size=HEAD_PT, bold=True, space_after=3)
-    p.paragraph_format.space_before = Pt(9)
+    p = para(doc, "", size=HEAD_PT, bold=True, space_after=3)
+    p.paragraph_format.space_before = Pt(6)
+    marker = p.add_run("■ ")
+    _style_run(marker, HEAD_PT, True, False)
+    # Pin the marker to the East Asian font so it is the same square in every
+    # heading, Latin-titled or Hangul-titled.
+    marker._element.get_or_add_rPr().get_or_add_rFonts().set(qn("w:hint"), "eastAsia")
+    _style_run(p.add_run(title), HEAD_PT, True, False)
+    p.paragraph_format.keep_with_next = True
     return p
 
 
@@ -297,17 +304,18 @@ def pub_chunks(n, p):
     return out
 
 
-def build_publications(doc, pubs):
+def build_publications(doc, pubs, ko):
     first = sorted([p for p in pubs if p.get("role") in ("first", "co_first", "corresponding")],
                    key=lambda p: -(p.get("year") or 0))
     co = sorted([p for p in pubs if p.get("role") == "co"], key=lambda p: -(p.get("year") or 0))
 
-    section(doc, "First Author Peer-Reviewed Publications "
+    section(doc, "주저자 논문 (+: 공동 1저자, *: 교신저자)" if ko else
+                 "First Author Peer-Reviewed Publications "
                  "(+: equal contributions, *: corresponding author)")
     for i, p in enumerate(first, 1):
         rich(doc, pub_chunks(i, p))
 
-    section(doc, "Co-Author Peer-Reviewed Publications")
+    section(doc, "공저자 논문" if ko else "Co-Author Peer-Reviewed Publications")
     for i, p in enumerate(co, 1):
         rich(doc, pub_chunks(i, p))
 
@@ -327,10 +335,10 @@ ROLE_LABEL = {"oral": "Oral Presenter", "poster": "Poster",
               "keynote": "Keynote"}
 
 
-def build_talks(doc, talks):
-    for title, kind in (("International Conference", "international"),
-                        ("Domestic Conference", "domestic")):
-        section(doc, title)
+def build_talks(doc, talks, ko):
+    for title_en, title_kr, kind in (("International Conference", "국제학회 발표", "international"),
+                                     ("Domestic Conference", "국내학회 발표", "domestic")):
+        section(doc, title_kr if ko else title_en)
         rows = sorted([t for t in talks if t.get("type") == kind],
                       key=lambda t: str(t.get("date", "")), reverse=True)
         for i, t in enumerate(rows, 1):
@@ -390,15 +398,18 @@ def build_interests(doc, profile, ko):
     para(doc, ", ".join(items) + ("" if ko else "."), indent=18)
 
 
-def build_scholar(doc, profile):
+def build_scholar(doc, profile, ko):
     m = profile.get("scholar_metrics") or {}
     if not m:
         return
-    section(doc, "Google Scholar Metrics")
-    rich(doc, [("Total citations: ", {}), (str(m['total_citations']), {"bold": True}),
-               (" · h-index: ", {}), (str(m['h_index']), {"bold": True}),
-               (" · i10-index: ", {}), (str(m['i10_index']), {"bold": True}),
-               (f" · as of {m['last_updated']}.", {})], indent=18, hanging=0)
+    section(doc, "Google Scholar 지표" if ko else "Google Scholar Metrics")
+    labels = (("총 피인용", "h-index", "i10-index", "기준")
+              if ko else ("Total citations", "h-index", "i10-index", "as of"))
+    rich(doc, [(f"{labels[0]}: ", {}), (str(m['total_citations']), {"bold": True}),
+               (f" · {labels[1]}: ", {}), (str(m['h_index']), {"bold": True}),
+               (f" · {labels[2]}: ", {}), (str(m['i10_index']), {"bold": True}),
+               (f" · {labels[3]} {m['last_updated']}" + ("" if ko else "."), {})],
+         indent=18, hanging=0)
 
 
 # ── document assembly ─────────────────────────────────────────────────
@@ -411,23 +422,20 @@ def build(lang: str, out: Path, web: bool = False):
     normal.font.size = Pt(BODY_PT)
     normal.element.get_or_add_rPr().get_or_add_rFonts().set(qn("w:eastAsia"), KO_FONT)
     for sec in doc.sections:
-        sec.top_margin = sec.bottom_margin = Pt(48)
+        sec.top_margin = sec.bottom_margin = Pt(40)
         sec.left_margin = sec.right_margin = Pt(50)
 
     build_header(doc, profile, ko, web)
     build_education(doc, profile, ko)
     build_experience(doc, profile, ko)
-    if not ko:
-        build_publications(doc, load("publications.yaml")["publications"])
+    build_publications(doc, load("publications.yaml")["publications"], ko)
     build_projects(doc, load("projects.yaml")["projects"], ko)
-    if not ko:
-        build_talks(doc, load("talks.yaml")["talks"])
+    build_talks(doc, load("talks.yaml")["talks"], ko)
     build_patents(doc, load("patents.yaml")["patents"], ko)
     build_specializations(doc, profile, ko)
     build_collaborations(doc, profile, ko)
     build_interests(doc, profile, ko)
-    if not ko:
-        build_scholar(doc, profile)
+    build_scholar(doc, profile, ko)
 
     doc.save(out)
     print(f"OK  {out.name}  ({out.stat().st_size:,} bytes)")

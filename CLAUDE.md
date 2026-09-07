@@ -35,7 +35,7 @@ rebuild_all.sh  one command for everything
 
 # Build the Word CVs (same SSOT, EN + KO, with ID photo)
 #   → CV/Curriculum Vitae Chihun Lee (YYYY.MM).docx   (full, mirrors the Typst sections)
-#   → CV/이력서 이치헌 (YYYY.MM).docx                  (Korean; no publications/conferences/Scholar)
+#   → CV/이력서 이치헌 (YYYY.MM).docx                  (Korean headings; English citations)
 /opt/homebrew/Caskroom/miniforge/base/envs/3dp/bin/python CV/build_cv_docx.py [--lang en|ko]
 
 # Korean CV for the site — CI only builds the Typst cv.pdf, so this one is a
