@@ -147,6 +147,27 @@ def section(doc, title):
     return p
 
 
+# Header link lines. Grouped so each line fits the header column at 9 pt;
+# labels/order stay in step with the Typst CV header.
+LINK_LINES = [
+    [("website", "Homepage", "홈페이지"), ("github", "GitHub", "GitHub")],
+    [("linkedin", "LinkedIn", "LinkedIn")],
+    [("scholar", "Scholar", "Google Scholar")],
+    [("orcid", "ORCID", "ORCID")],
+]
+
+
+def link_lines(profile: dict, ko: bool) -> list[str]:
+    links = profile.get("links", {})
+    out = []
+    for group in LINK_LINES:
+        bits = [f"{(kr if ko else en)}: {links[key]}"
+                for key, en, kr in group if links.get(key)]
+        if bits:
+            out.append("   ·   ".join(bits))
+    return out
+
+
 def _photo_stream(path: Path, px_h: int = 420):
     """Downscale the ID photo to ~300 dpi for the 1.09 x 1.4 in slot.
 
@@ -200,17 +221,14 @@ def build_header(doc, profile, ko, web=False):
             f"직위: {profile['title_kr']}",
             f"사무실: {c['office_phone']}   휴대전화: {c['mobile']}",
             f"이메일: {c['email']}   국적: {profile['nationality_kr']}",
-            f"웹: {profile['links']['website']}",
-        ]
+        ] + link_lines(profile, ko)
     else:
         lines = [
             f"{profile['affiliation']}, {profile['division']}",
             f"Position: {profile['title']}",
             f"Office: {c['office_phone']}   Mobile: {c['mobile']}",
             f"E-mail: {c['email']}   Nationality: {profile['nationality']}",
-            f"Web: {profile['links']['website']}",
-            f"Scholar: {profile['links']['scholar']}",
-        ]
+        ] + link_lines(profile, ko)
     for ln in lines:
         q = para(left, ln, size=9, space_after=0)
         for r in q.runs:
