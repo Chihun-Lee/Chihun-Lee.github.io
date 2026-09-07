@@ -248,6 +248,7 @@ def render_specializations(spec: dict) -> str:
         "learning_and_optimization": "Learning & Optimization",
         "manufacturing_apps": "Manufacturing Applications",
         "nanophotonics_apps": "Nanophotonics Applications",
+        "autonomous_lab": "Metal Autonomous Laboratory",
     }
     for key, label in labels.items():
         if key not in spec:

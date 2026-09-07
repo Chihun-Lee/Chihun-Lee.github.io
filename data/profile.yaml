@@ -5,10 +5,16 @@ name: Chihun Lee
 name_kr: 이치헌
 honorific: Ph.D.
 title: Senior Researcher (KIMS) · Assistant Professor (UST, KIMS Campus)
+title_kr: 선임연구원(한국재료연구원) · 조교수(UST 재료연구원 캠퍼스)
 affiliation: Korea Institute of Materials Science (KIMS)
 affiliation_kr: 한국재료연구원
 division: Material Data & Analysis Research Division
+division_kr: 재료데이터·분석연구본부
 nationality: Republic of Korea
+nationality_kr: 대한민국
+
+# Photo used by the Word CV builder (local only — source/ is gitignored).
+photo: source/증명사진_이치헌.png
 
 contact:
   email: chihunlee@kims.re.kr
@@ -53,7 +59,13 @@ research_interests:
   - AI for materials
   - AI for manufacturing
   - Metamaterials and nanophotonic inverse design
-  - Autonomous experimentation for metals
+  - Autonomous experimentation and self-driving laboratories for metals
+
+research_interests_kr:
+  - 소재를 위한 인공지능
+  - 제조를 위한 인공지능
+  - 메타물질 및 나노포토닉 역설계
+  - 금속 소재 자율실험 및 자율실험실(Self-driving lab)
 
 # Four pillars used for grouping on the website
 research_pillars:
@@ -96,47 +108,67 @@ research_pillars:
 
 education:
   - degree: Ph.D.
+    degree_kr: 박사
     field: Mechanical Engineering
+    field_kr: 기계공학과
     institution: Pohang University of Science and Technology (POSTECH)
+    institution_kr: 포항공과대학교(POSTECH)
     advisor: Prof. Junsuk Rho
+    advisor_kr: 노준석 교수
     start: 2020-02
     end: 2025-02
   - degree: M.S.
+    degree_kr: 석사
     field: Mechanical Engineering
+    field_kr: 기계공학과
     institution: Pohang University of Science and Technology (POSTECH)
+    institution_kr: 포항공과대학교(POSTECH)
     advisor: Prof. Seongjin Park
+    advisor_kr: 박성진 교수
     start: 2018-03
     end: 2019-08
   - degree: B.S.
+    degree_kr: 학사
     field: Mechanical Engineering
+    field_kr: 기계공학과
     institution: Pohang University of Science and Technology (POSTECH)
+    institution_kr: 포항공과대학교(POSTECH)
     start: 2013-03
     end: 2018-02
 
 experience:
   - role: Assistant Professor
+    role_kr: 조교수
     org: University of Science and Technology (UST), KIMS Campus
+    org_kr: 과학기술연합대학원대학교(UST) 재료연구원 캠퍼스
     division: Advanced Materials Engineering
+    division_kr: 신소재공학전공
     start: 2026-09
     end: present
   - role: Senior Researcher
+    role_kr: 선임연구원
     org: Korea Institute of Materials Science (KIMS)
+    org_kr: 한국재료연구원
     division: Material Data & Analysis Research Division
+    division_kr: 재료데이터·분석연구본부
     start: 2025-02
     end: present
-  - role: Technical Research Personnel (Alternative Military Service)
-    org: POSTECH
-    start: 2022-02
-    end: 2025-02
   - role: Researcher
+    role_kr: 연구원
     org: Korea Institute of Industrial Technology (KITECH)
+    org_kr: 한국생산기술연구원
     division: Intelligent Manufacturing (Root Technology) Research Institute
+    division_kr: 지능화뿌리기술연구소
     note: Neural network development for production and manufacturing
+    note_kr: 생산제조용 인공신경망 개발
     start: 2019-08
     end: 2019-12
   - role: Guest Researcher
+    role_kr: 위촉연구원
     org: Korea Institute of Industrial Technology (KITECH)
+    org_kr: 한국생산기술연구원
     pi: Dr. Dongyoung Park
+    pi_kr: 박동용 박사
     start: 2018-08
     end: 2018-12
 
@@ -167,21 +199,79 @@ specializations:
     - Achromatic metalens
     - Meta-hologram
     - Beam forming
+  autonomous_lab:
+    - Instrument automation and integration
+    - ROS-based robotic sample handling
+    - In-situ data acquisition and standardization
+    - Closed-loop active learning and Bayesian optimization
+    - Agentic experiment orchestration
+    - Laser powder bed fusion parameter search
+
+specializations_kr:
+  forward_simulation:
+    - RCWA (자체 개발 MATLAB)
+    - FDTD (Lumerical, MEEP)
+    - FEM (COMSOL)
+    - 벌크 광학 (VirtualLab Fusion)
+    - 스칼라 회절 (자체 개발 MATLAB)
+  learning_and_optimization:
+    - PyTorch, TensorFlow
+    - 탐색법, PSO, 유전 알고리즘, CMA-ES
+    - 수반법(Adjoint), 자동미분, 경사법
+    - DDQN, 시뮬레이티드 어닐링
+    - 가우시안 프로세스 (베이지안 최적화)
+  manufacturing_apps:
+    - 사출성형
+    - 열연 코일 적치
+    - 프레스, 드릴링
+    - DED 금속 3D 프린팅
+    - 분말사출성형, 분말 제조
+  nanophotonics_apps:
+    - LED 시뮬레이션 및 집광
+    - 3D 패터닝 마스크 설계
+    - 컬러필터
+    - 나노 안테나
+    - 무색수차 메타렌즈
+    - 메타홀로그램
+    - 빔포밍
+  autonomous_lab:
+    - 장비 자동화 및 통합 운용
+    - ROS 기반 로봇 시료 이송
+    - In-situ 데이터 수집·정형화
+    - 폐루프 능동학습 및 베이지안 최적화
+    - 에이전트 기반 실험 오케스트레이션
+    - 레이저 분말베드용융(LPBF) 공정조건 탐색
 
 collaborations:
   - lab: Nanomaterials for Electronics and Optics Lab
+    lab_kr: 전자·광학 나노소재 연구실
     institution: Korea University
+    institution_kr: 고려대학교
     pi: Prof. Seokwoo Jeon
+    pi_kr: 전석우 교수
     topic: 3D nanopatterning using metasurface
+    topic_kr: 메타표면 기반 3차원 나노패터닝
   - lab: Leibniz IFW Dresden
+    lab_kr: Leibniz IFW Dresden
     institution: Leibniz IFW Dresden
+    institution_kr: 라이프니츠 IFW 드레스덴
     pi: Prof. Konrad Kosiba
+    pi_kr: Konrad Kosiba 교수
     topic: Optimization of laser powder bed fusion
+    topic_kr: 레이저 분말베드용융(LPBF) 공정 최적화
   - lab: IKV-AACHEN
+    lab_kr: IKV-AACHEN
     institution: RWTH Aachen
+    institution_kr: RWTH 아헨공과대학교
     pi: Dr. Pascal Bibow
+    pi_kr: Pascal Bibow 박사
     topic: Optimization of injection molding
+    topic_kr: 사출성형 공정 최적화
   - lab: EM & Intelligent Design
+    lab_kr: EM & Intelligent Design 연구실
     institution: Hanyang University
+    institution_kr: 한양대학교
     pi: Prof. Haejun Chung
+    pi_kr: 정해준 교수
     topic: Achromatic metalens inverse design using adjoint method
+    topic_kr: 수반법 기반 무색수차 메타렌즈 역설계

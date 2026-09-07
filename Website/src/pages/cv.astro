@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import { profile } from '../lib/data';
+
+const slug = profile.name.replace(/\s+/g, '_');
 ---
 <Base title="CV" active="cv">
   <section>
@@ -8,15 +10,23 @@ import { profile } from '../lib/data';
       <span class="eyebrow">Curriculum Vitae</span>
       <h1>CV</h1>
       <p style="max-width: 720px;">
-        Download the full CV as PDF, or view it inline below. The CV is built from the same YAML source of truth as this site.
+        Available in English and Korean. Both are built from the same YAML source of truth as this
+        site; the Korean edition (국문 이력서) lists education, positions, funded projects, patents
+        and specializations, and leaves out the publication and conference lists.
       </p>
-      <div style="margin: 24px 0; display:flex; gap:12px; flex-wrap:wrap;">
-        <a href="/cv.pdf" class="btn" download={`${profile.name.replace(/\s+/g, '_')}_CV.pdf`}>Download PDF</a>
-        <a href="/cv.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Open in new tab</a>
+
+      <div class="cv-langs" role="group" aria-label="CV language">
+        <button type="button" class="btn" data-cv="/cv.pdf" aria-pressed="true">English</button>
+        <button type="button" class="btn btn-ghost" data-cv="/cv-ko.pdf" aria-pressed="false">국문</button>
+      </div>
+
+      <div style="margin: 16px 0 0; display:flex; gap:12px; flex-wrap:wrap;">
+        <a id="cv-download" href="/cv.pdf" class="btn btn-ghost" download={`${slug}_CV.pdf`}>Download PDF</a>
+        <a id="cv-newtab" href="/cv.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Open in new tab</a>
       </div>
 
       <div style="margin-top: 32px; border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; background: var(--bg-elevated);">
-        <object data="/cv.pdf" type="application/pdf" width="100%" style="height: 90vh; min-height: 600px; display:block;">
+        <object id="cv-embed" data="/cv.pdf" type="application/pdf" width="100%" style="height: 90vh; min-height: 600px; display:block;">
           <p style="padding: 24px;">
             Your browser cannot embed PDFs. <a href="/cv.pdf">Download the CV</a> instead.
           </p>
@@ -25,3 +35,37 @@ import { profile } from '../lib/data';
     </div>
   </section>
 </Base>
+
+<style>
+  .cv-langs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+</style>
+
+<script is:inline>
+  (() => {
+    const buttons = Array.from(document.querySelectorAll('[data-cv]'));
+    let embed = document.getElementById('cv-embed');
+    const dl = document.getElementById('cv-download');
+    const tab = document.getElementById('cv-newtab');
+    const NAMES = { '/cv-ko.pdf': '\uc774\ub825\uc11c_\uc774\uce58\ud5cc.pdf' };
+    const enName = dl.getAttribute('download');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const href = btn.dataset.cv;
+        buttons.forEach((b) => {
+          const on = b === btn;
+          b.setAttribute('aria-pressed', String(on));
+          b.classList.toggle('btn-ghost', !on);
+        });
+        // Safari ignores a live `data` swap, so swap in a fresh <object>.
+        const fresh = embed.cloneNode(false);
+        fresh.data = href;
+        embed.replaceWith(fresh);
+        embed = fresh;
+        dl.href = href;
+        tab.href = href;
+        dl.setAttribute('download', NAMES[href] || enName);
+      });
+    });
+  })();
+</script>
