@@ -125,6 +125,8 @@ def render_experience(items: list[dict]) -> str:
         left_parts.append(org)
         if ex.get("pi"):
             left_parts.append(f"PI: {esc(ex['pi'])}")
+        if ex.get("note"):
+            left_parts.append(esc(ex["note"]))
         left = " — ".join(left_parts)
         right = fmt_range(ex.get("start", ""), ex.get("end", ""))
         out.append(f"#entry[{left}][{right}]")

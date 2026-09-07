@@ -4,7 +4,7 @@
 name: Chihun Lee
 name_kr: 이치헌
 honorific: Ph.D.
-title: Senior Researcher
+title: Senior Researcher (KIMS) · Assistant Professor (UST, KIMS Campus)
 affiliation: Korea Institute of Materials Science (KIMS)
 affiliation_kr: 한국재료연구원
 division: Material Data & Analysis Research Division
@@ -46,7 +46,7 @@ long_bio: >
   manufacturing process optimization, (ii) nanophotonic inverse design,
   (iii) materials property optimization, and (iv) autonomous experimentation
   for metal alloys. I co-develop AI codes with industry partners (POSCO, LG
-  Display, Samsung Display, Hanwha Defense, LS mtron) and academic labs
+  Display, Samsung Display, Hanwha Defense, LS Mtron, KITECH) and academic labs
   (Korea Univ., Hanyang Univ., Leibniz IFW Dresden, IKV-AACHEN).
 
 research_interests:
@@ -128,6 +128,12 @@ experience:
     org: POSTECH
     start: 2022-02
     end: 2025-02
+  - role: Researcher
+    org: Korea Institute of Industrial Technology (KITECH)
+    division: Intelligent Manufacturing (Root Technology) Research Institute
+    note: Neural network development for production and manufacturing
+    start: 2019-08
+    end: 2019-12
   - role: Guest Researcher
     org: Korea Institute of Industrial Technology (KITECH)
     pi: Dr. Dongyoung Park

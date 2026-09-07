@@ -1,57 +1,162 @@
 # Funded / industry research projects — SSOT
+#
+# Sources of truth (2026-09-06 update):
+#   [A] KIMS 2024 3rd open recruitment résumé, submitted 2024-11-25
+#       (~/Rholab/면접_세미나_디펜스/재료연/내가 작성한 이력서.pdf) — 연구과제 참여 9건,
+#       official titles / periods / roles. This is the authoritative record for
+#       2018–2025 project participation.
+#   [B] POSTECH–POSCO(RIST) research plans, proposal codes 20198087 and 20208054
+#       (~/Rholab/6.연구과제/POSCO/) — two distinct POSCO commissioned projects.
+#   [C] KIMS 2026 project ledger (account codes in ~/CLAUDE.md). Multi-year spans
+#       are inferred from the stage marker (e.g. "1/5" → 5-year programme, year 1).
 projects:
-  - title: Development of AI injection molding system having a shorter mold set-up time with minimum 60% probability than an expert
-    sponsor: LS mtron
-    role: Development of AI code
-    start: 2018-01
-    end: 2019-12
+  # ── KIMS (2025– ) ────────────────────────────────────────────────────
+  - title: Development of a large-scale AI foundation model for metallic materials
+    title_kr: 금속 소재 거대 AI 파운데이션 모델 개발
+    sponsor: Korea Institute of Materials Science / Ministry of Science and ICT
+    role: Participating researcher — foundation model design and training
+    start: 2026-01
+    end: 2030-12
+    pillar: materials
+
+  - title: Construction of multimodal big data for metallic materials
+    title_kr: 금속 소재 멀티모달 빅데이터 구축
+    sponsor: Korea Institute of Materials Science / Ministry of Science and ICT
+    role: Participating researcher — autonomous experimentation and multimodal data pipeline
+    start: 2026-01
+    end: 2030-12
+    pillar: autonomous-metal-lab
+
+  - title: Materials research innovation technology using multimodal artificial intelligence
+    title_kr: 멀티모달 인공지능 활용 소재연구혁신 기술 개발
+    sponsor: Korea Institute of Materials Science / Ministry of Science and ICT
+    role: Participating researcher — multimodal property prediction models
+    start: 2025-01
+    end: 2027-12
+    pillar: materials
+
+  - title: Planning of national mission-oriented convergence R&D programmes
+    title_kr: 국가임무형 융합 R&D 대형과제 기획사업
+    sponsor: Korea Institute of Materials Science / Ministry of Science and ICT
+    role: Participating researcher — AI and materials programme planning
+    start: 2025-01
+    end: 2027-12
+    pillar: materials
+
+  - title: "IRIS: construction of 3D printing materials data for aerospace applications (Phase 1)"
+    title_kr: "[IRIS] 우주항공용 3D 프린팅 소재 데이터 구축 (1단계)"
+    sponsor: Korea Institute of Materials Science / Ministry of Trade, Industry and Energy
+    role: Participating researcher — generative microstructure models for PBF Ti-6Al-4V
+    start: 2025-01
+    end: 2027-12
     pillar: manufacturing
 
-  - title: Development of an Optimization Model Based on Numerical Analysis to Minimize the Temperature Deviation of Coil in the Three-Row Curving Yard
-    sponsor: POSCO
-    role: Development of AI code
-    start: 2020-04
-    end: 2021-02
+  - title: "K-PASS: digital innovation platform for metal materials manufacturing (Stage 2)"
+    title_kr: "[K-PASS] 금속소재 제조디지털혁신 플랫폼 구축 (2단계)"
+    sponsor: Korea Institute of Materials Science / Ministry of Trade, Industry and Energy
+    role: Participating researcher — process AI and data platform
+    start: 2025-01
+    end: 2026-12
     pillar: manufacturing
 
-  - title: A Study on the Propagation Transformation using X-band Metasurface Structure
-    sponsor: Hanwha Defense
-    role: Design of metasurface
-    start: 2020-01
-    end: 2021-12
-    pillar: nanophotonics
-
-  - title: Development of metasurface structures that can control the direction of light by conditioning the luminance distribution of OLED light sources
-    sponsor: LG Display
-    role: Design of metasurface
-    start: 2020-03
-    end: 2021-02
-    pillar: nanophotonics
-
-  - title: Development of Ultra High-resolution Metasurface Color Filter for Display
-    sponsor: LG Display
-    role: Design of metasurface
-    start: 2021-12
-    end: 2022-11
-    pillar: nanophotonics
-
-  - title: Design and Development of High-Refractive Polymer-based Visible Light Absorber Metalens with Large Area
+  # ── POSTECH: industry & national projects (2018–2025) ────────────────
+  - title: High-efficiency functional metalens design and printing technology
+    title_kr: 고효율 기능성 메타렌즈 디자인 및 프린팅 기술 연구
     sponsor: Samsung Display
-    role: Design of metalens
+    role: Achromatic large-area metalens design
+    start: 2023-03
+    end: 2025-01
+    pillar: nanophotonics
+
+  - title: Design and development of high-refractive polymer-based visible light absorber metalens with large area
+    sponsor: Samsung Display
+    role: Metalens design
     start: 2022-04
     end: 2024-03
     pillar: nanophotonics
 
-  - title: Development of intelligent root technology with add-on modules
-    sponsor: Korea Institute of Industrial Technology (KITECH)
-    role: Development of AI code
-    start: 2020-02
-    end: 2025-02
-    pillar: manufacturing
+  - title: Metaphotonics-based flat optics research institute (industry–academia convergence institute)
+    title_kr: 메타포토닉스 기반 평면광학 연구소
+    sponsor: POSCO
+    role: Large-area metalens design
+    start: 2022-07
+    end: 2025-01
+    pillar: nanophotonics
+
+  - title: Development of an optical platform for commercialising smart anti-counterfeiting technology
+    title_kr: 스마트 위변조 방지 기술 상용화를 위한 광학 플랫폼 개발
+    sponsor: National Research Foundation of Korea
+    role: Metalens design
+    start: 2022-06
+    end: 2025-01
+    pillar: nanophotonics
 
   - title: Hologram Printing & Encoding of Super-Depth-3D Pattern (HOPE)
-    sponsor: Korea University
-    role: Design of metasurface
+    title_kr: 홀로그램 프린팅 기반 초심해 3D 패턴 인코딩 기술
+    sponsor: National Research Foundation of Korea (with Korea University)
+    role: Inverse design of meta-masks for 3D nanopatterning
     start: 2022-04
-    end: 2025-11
+    end: 2025-01
     pillar: nanophotonics
+
+  - title: Development of manufacturing-optimal AI algorithms for root industries (intelligent root technology with add-on modules)
+    title_kr: 뿌리 산업 맞춤형 제조 최적 인공지능 알고리즘 개발
+    sponsor: Korea Institute of Industrial Technology (KITECH)
+    role: Neural network design, optimisation, and on-site deployment (press-machine defect pre-warning system)
+    start: 2020-02
+    end: 2025-01
+    pillar: manufacturing
+
+  - title: Development of ultra high-resolution metasurface color filter for display
+    title_kr: 디스플레이용 극고선명 메타표면 컬러필터 개발
+    sponsor: LG Display
+    role: Hybrid color-filter computation and inverse design
+    start: 2021-03
+    end: 2022-02
+    pillar: nanophotonics
+
+  - title: A study on the propagation transformation using X-band metasurface structure
+    sponsor: Hanwha Defense
+    role: Metasurface design
+    start: 2020-01
+    end: 2021-12
+    pillar: nanophotonics
+
+  - title: Development of an optimization model based on numerical analysis to minimize the temperature deviation of coil in the three-row curving yard
+    title_kr: 3열연 정정야드내 코일 온도편차 최소화를 위한 수치해석 기반 최적화 모델 개발
+    sponsor: POSCO
+    role: Cooling analysis, ANN-based cooling prediction, and coil placement optimisation system
+    start: 2020-04
+    end: 2021-02
+    pillar: manufacturing
+
+  - title: Development of metasurface structures for collimating and steering the luminance distribution of LED / OLED light sources
+    title_kr: LED 광원 집광 및 방향 제어용 메타표면 개발
+    sponsor: LG Display
+    role: LED optical modelling and metalens design
+    start: 2020-03
+    end: 2021-02
+    pillar: nanophotonics
+
+  - title: Development of an AI injection molding system with a condition hit rate of 60% or higher
+    title_kr: 조건적중율 60% 이상의 인공지능형 사출성형 시스템 개발
+    sponsor: National Research Foundation of Korea
+    role: Neural network development and deployment on the injection molding machine
+    start: 2020-01
+    end: 2020-12
+    pillar: manufacturing
+
+  - title: Development of coil temperature prediction technology in the hot-rolling finishing yard to improve the cold-rolling yield of 780DP steel
+    title_kr: 780DP 냉연 실수율 향상을 위한 열연 정정야드內 코일 온도 예측 기술개발
+    sponsor: POSCO / RIST
+    role: FEM/FDM thermal model development and coil temperature prediction
+    start: 2019-04
+    end: 2020-02
+    pillar: manufacturing
+
+  - title: Development of AI injection molding system having a shorter mold set-up time with minimum 60% probability than an expert
+    sponsor: LS Mtron
+    role: AI code development — ANN and simulation–experiment transfer learning
+    start: 2018-01
+    end: 2019-12
+    pillar: manufacturing

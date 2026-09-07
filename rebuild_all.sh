@@ -9,10 +9,14 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT"
 
+# CV/site builders need PyYAML — use the 3dp miniforge env, not bare python3.
+PY="${PY:-/opt/homebrew/Caskroom/miniforge/base/envs/3dp/bin/python}"
+[ -x "$PY" ] || PY=python3
+
 target="${1:-all}"
 
-build_cv()   { echo "▸ CV (Typst)";   python3 "$ROOT/CV/build_cv.py"; }
-build_sns()  { echo "▸ LinkedIn drafts"; python3 "$ROOT/SNS/generate_posts.py"; }
+build_cv()   { echo "▸ CV (Typst)";   "$PY" "$ROOT/CV/build_cv.py"; }
+build_sns()  { echo "▸ LinkedIn drafts"; "$PY" "$ROOT/SNS/generate_posts.py"; }
 build_site() {
   echo "▸ Website (Astro)"
   # Copy the latest CV PDF into the site's public/ so /cv.pdf works.
